@@ -16,13 +16,15 @@ enum InitError : Error {
 class Router {
     let navigation : UINavigationController
     let window : UIWindow
+    let userRepo : userStorage
     
     init?(window: UIWindow?) {
         guard let validWindow = window else {
             return nil
         }
+        self.userRepo = userRepository()
         self.window = validWindow
-        self.navigation = UINavigationController.init(rootViewController: Router.createLogin())
+        self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo))
     }
     
     func setUp() {
@@ -30,8 +32,8 @@ class Router {
         self.window.makeKeyAndVisible()
     }
     
-    class func createLogin() -> UIViewController {
-        let login = ViewController()
+    class func createLogin(userRepo : userStorage) -> UIViewController {
+        let login = ViewController.init(userRepository: userRepo)
         return login
     }
     

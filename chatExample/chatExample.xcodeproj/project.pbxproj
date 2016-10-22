@@ -14,6 +14,7 @@
 		CD8D90791DBB84B700A4302D /* chatExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D90781DBB84B700A4302D /* chatExampleUITests.swift */; };
 		CD8D90871DBB853300A4302D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D90861DBB853300A4302D /* Router.swift */; };
 		CD8D90891DBB8F3800A4302D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8D90881DBB8F3800A4302D /* Launch Screen.storyboard */; };
+		CD8D908B1DBBA30D00A4302D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D908A1DBBA30D00A4302D /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		CD8D907A1DBB84B700A4302D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD8D90861DBB853300A4302D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CD8D90881DBB8F3800A4302D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CD8D908A1DBBA30D00A4302D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				CD8D90581DBB84B600A4302D /* AppDelegate.swift */,
 				CD8D905A1DBB84B600A4302D /* ViewController.swift */,
+				CD8D908A1DBBA30D00A4302D /* ViewController.xib */,
 				CD8D90861DBB853300A4302D /* Router.swift */,
 				CD8D905F1DBB84B600A4302D /* Assets.xcassets */,
 				CD8D90641DBB84B600A4302D /* Info.plist */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD8D90891DBB8F3800A4302D /* Launch Screen.storyboard in Resources */,
+				CD8D908B1DBBA30D00A4302D /* ViewController.xib in Resources */,
 				CD8D90601DBB84B600A4302D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +406,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.chat.chatExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -415,6 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.chat.chatExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

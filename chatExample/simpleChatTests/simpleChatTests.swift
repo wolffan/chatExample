@@ -1,15 +1,15 @@
 //
-//  chatExampleTests.swift
-//  chatExampleTests
+//  simpleChatTests.swift
+//  simpleChatTests
 //
-//  Created by Raimon Lapuente on 22/10/2016.
+//  Created by Raimon Lapuente on 23/10/2016.
 //  Copyright © 2016 Raimon Lapuente. All rights reserved.
 //
 
 import XCTest
-@testable import chatExample
+@testable import simpleChat
 
-class chatExampleTests: XCTestCase {
+class simpleChatTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

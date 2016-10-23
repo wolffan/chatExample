@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import chatExample
+@testable import simpleChat
 
 class userRepositoryIntegrationTests: XCTestCase {
     

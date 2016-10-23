@@ -1,14 +1,14 @@
 //
-//  chatExampleUITests.swift
-//  chatExampleUITests
+//  simpleChatUITests.swift
+//  simpleChatUITests
 //
-//  Created by Raimon Lapuente on 22/10/2016.
+//  Created by Raimon Lapuente on 23/10/2016.
 //  Copyright © 2016 Raimon Lapuente. All rights reserved.
 //
 
 import XCTest
 
-class chatExampleUITests: XCTestCase {
+class simpleChatUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

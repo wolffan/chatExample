@@ -24,7 +24,12 @@ class Router {
         }
         self.userRepo = userRepository()
         self.window = validWindow
+        // restore session
+        let (hasSession, username) = Router.hasStoredSession(userRepo: self.userRepo)
         self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo))
+        if hasSession {
+            self.loginFinishedWithUser(username: username!)
+        }
     }
     
     func setUp() {
@@ -32,14 +37,30 @@ class Router {
         self.window.makeKeyAndVisible()
     }
     
-    class func createLogin(userRepo : userStorage) -> UIViewController {
-        let login = ViewController.init(userRepository: userRepo)
+    class func createLogin(userRepo : userStorage) -> ViewController {
+        let login = ViewController()
         return login
     }
     
+    class func createChatController(username: String) -> ChatController {
+        let chatController = ChatController(username: username)
+        return chatController
+    }
+    
+    // -- Session methods --
+    
+    class func hasStoredSession(userRepo: userStorage) -> (Bool,String?) {
+        if let user = userRepo.getSavedUser() {
+            return (true, user)
+        }
+        return (false, nil)
+    }
+    
+    // -- Navigation Methods --
+    
     func loginFinishedWithUser(username: String) {
         self.userRepo.saveUser(username: username)
-        let chatController = ChatController(username: username)
+        let chatController = Router.createChatController(username: username)
         self.navigation.pushViewController(chatController, animated: true)
     }
 }

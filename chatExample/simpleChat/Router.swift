@@ -37,4 +37,9 @@ class Router {
         return login
     }
     
+    func loginFinishedWithUser(username: String) {
+        self.userRepo.saveUser(username: username)
+        let chatController = ChatController(username: username)
+        self.navigation.pushViewController(chatController, animated: true)
+    }
 }

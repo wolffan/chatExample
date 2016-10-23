@@ -38,6 +38,10 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
     }
 
     @IBAction func loginButtonPressed(_ sender: AnyObject) {
+        self.usernameField.resignFirstResponder()
+        if let username = usernameField.text {
+            self.finisWithUsername(username: username)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

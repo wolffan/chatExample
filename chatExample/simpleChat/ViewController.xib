@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="chatExample" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="simpleChat" customModuleProvider="target">
             <connections>
                 <outlet property="bottomDistance" destination="zuv-16-f8R" id="b43-ey-6Nr"/>
                 <outlet property="loginButton" destination="kFu-6r-545" id="PS3-mi-6gh"/>
@@ -53,6 +53,9 @@
                     <state key="normal" title="LOGIN">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="loginButtonPressed:" destination="-1" eventType="touchUpInside" id="vuc-6U-9sM"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

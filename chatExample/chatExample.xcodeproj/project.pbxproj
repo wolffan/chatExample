@@ -15,6 +15,7 @@
 		CD8D90871DBB853300A4302D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8D90861DBB853300A4302D /* Router.swift */; };
 		CD8D90891DBB8F3800A4302D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8D90881DBB8F3800A4302D /* Launch Screen.storyboard */; };
 		CD8D908B1DBBA30D00A4302D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8D908A1DBBA30D00A4302D /* ViewController.xib */; };
+		CD9CE42B1DBCAC20008A0F22 /* keyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9CE42A1DBCAC20008A0F22 /* keyboardExtension.swift */; };
 		CDE1DEFA1DBC1E2300D2D511 /* userRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1DEF91DBC1E2300D2D511 /* userRepository.swift */; };
 		CDE1DEFC1DBC24F800D2D511 /* userRepositoryIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE1DEFB1DBC24F700D2D511 /* userRepositoryIntegrationTests.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		CD8D90861DBB853300A4302D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CD8D90881DBB8F3800A4302D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CD8D908A1DBBA30D00A4302D /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		CD9CE42A1DBCAC20008A0F22 /* keyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keyboardExtension.swift; sourceTree = "<group>"; };
 		CDE1DEF91DBC1E2300D2D511 /* userRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepository.swift; sourceTree = "<group>"; };
 		CDE1DEFB1DBC24F700D2D511 /* userRepositoryIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepositoryIntegrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +110,7 @@
 				CD8D908A1DBBA30D00A4302D /* ViewController.xib */,
 				CD8D90861DBB853300A4302D /* Router.swift */,
 				CDE1DEF91DBC1E2300D2D511 /* userRepository.swift */,
+				CD9CE42A1DBCAC20008A0F22 /* keyboardExtension.swift */,
 				CD8D905F1DBB84B600A4302D /* Assets.xcassets */,
 				CD8D90641DBB84B600A4302D /* Info.plist */,
 				CD8D90881DBB8F3800A4302D /* Launch Screen.storyboard */,
@@ -274,6 +277,7 @@
 				CD8D905B1DBB84B600A4302D /* ViewController.swift in Sources */,
 				CD8D90871DBB853300A4302D /* Router.swift in Sources */,
 				CDE1DEFA1DBC1E2300D2D511 /* userRepository.swift in Sources */,
+				CD9CE42B1DBCAC20008A0F22 /* keyboardExtension.swift in Sources */,
 				CD8D90591DBB84B600A4302D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

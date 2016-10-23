@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="chatExample" customModuleProvider="target">
             <connections>
+                <outlet property="bottomDistance" destination="zuv-16-f8R" id="b43-ey-6Nr"/>
                 <outlet property="loginButton" destination="kFu-6r-545" id="PS3-mi-6gh"/>
                 <outlet property="messageImage" destination="5zn-a0-FL3" id="mFU-nb-lr6"/>
                 <outlet property="usernameField" destination="CUZ-GQ-65O" id="7TK-Hh-08M"/>
@@ -35,6 +36,9 @@
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="bux-ny-gXQ"/>
+                    </connections>
                 </textField>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5zn-a0-FL3">
                     <constraints>

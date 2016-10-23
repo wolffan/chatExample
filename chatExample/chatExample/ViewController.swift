@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+
+class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate {
     
+    @IBOutlet weak var bottomDistance: NSLayoutConstraint!
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var messageImage: UIImageView!
+    
     let userRepo : userStorage
     
     init(userRepository: userStorage) {
@@ -29,9 +33,23 @@ class ViewController: UIViewController {
         
         self.loginButton.layer.cornerRadius = 5.0
         self.usernameField.layer.cornerRadius = 5.0
+        
+        self.registerForKeyboard()
     }
 
     @IBAction func loginButtonPressed(_ sender: AnyObject) {
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.usernameField.resignFirstResponder()
+        return true
+    }
+    
+    func animateKeyboardChange(height: Float) {
+        self.bottomDistance.constant -= CGFloat(height)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 
 }

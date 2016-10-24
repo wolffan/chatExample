@@ -63,4 +63,9 @@ class Router {
         let chatController = Router.createChatController(username: username)
         self.navigation.pushViewController(chatController, animated: animated)
     }
+    
+    func logout() {
+        self.userRepo.removeUser()
+        self.navigation.popViewController(animated: true)
+    }
 }

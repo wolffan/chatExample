@@ -49,6 +49,6 @@ class ChatController: UIViewController {
     }
     
     func logoutPressed() {
-        
+        self.userlogout()
     }
 }

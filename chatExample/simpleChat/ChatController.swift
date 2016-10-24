@@ -27,5 +27,28 @@ class ChatController: UIViewController {
         super.viewDidLoad()
         
         self.title = ("Chat - " + username)
+        
+        // remove back button
+        self.hideBackButton()
+        // add logout button
+        self.addLogoutButton()
+        // configure collection
+        
+        //fetch chat info - needs repository
+        
+        //animations for text and keyboard
+    }
+    
+    func hideBackButton() {
+        self.navigationItem.hidesBackButton = true
+    }
+    
+    func addLogoutButton() {
+        let logoutButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(logoutPressed))
+        self.navigationItem.rightBarButtonItem = logoutButton
+    }
+    
+    func logoutPressed() {
+        
     }
 }

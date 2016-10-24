@@ -28,7 +28,7 @@ class Router {
         let (hasSession, username) = Router.hasStoredSession(userRepo: self.userRepo)
         self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo))
         if hasSession {
-            self.loginFinishedWithUser(username: username!)
+            self.loginFinishedWithUser(username: username!,animated: false)
         }
     }
     
@@ -58,9 +58,9 @@ class Router {
     
     // -- Navigation Methods --
     
-    func loginFinishedWithUser(username: String) {
+    func loginFinishedWithUser(username: String, animated: Bool) {
         self.userRepo.saveUser(username: username)
         let chatController = Router.createChatController(username: username)
-        self.navigation.pushViewController(chatController, animated: true)
+        self.navigation.pushViewController(chatController, animated: animated)
     }
 }

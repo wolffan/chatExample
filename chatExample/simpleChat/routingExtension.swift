@@ -18,7 +18,7 @@ extension ViewController: transferUser {
     func finisWithUsername(username: String) {
         let app = UIApplication.shared.delegate as! AppDelegate
         if let router = app.router {
-            router.loginFinishedWithUser(username: username)
+            router.loginFinishedWithUser(username: username, animated: true)
         }
     }
 }

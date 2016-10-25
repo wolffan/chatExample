@@ -8,6 +8,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatController" customModule="simpleChat" customModuleProvider="target">
             <connections>
+                <outlet property="chatBox" destination="RYa-7S-A1X" id="P3M-hB-Ml3"/>
+                <outlet property="chatContainer" destination="oeA-8N-JDr" id="s7e-bu-FpJ"/>
+                <outlet property="collection" destination="XXg-og-Ggh" id="51o-Ic-oaz"/>
+                <outlet property="collectionFlowLayout" destination="5A0-3U-SOi" id="hDl-Ny-0X1"/>
+                <outlet property="sendButton" destination="XcP-eV-C2a" id="Ybo-UB-LLK"/>
                 <outlet property="view" destination="iN0-l3-epB" id="D3w-uL-dyp"/>
             </connections>
         </placeholder>
@@ -24,6 +29,10 @@
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="iFI-TB-PLa"/>
+                        <outlet property="delegate" destination="-1" id="Par-PF-TVK"/>
+                    </connections>
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-8N-JDr">
                     <subviews>
@@ -42,6 +51,9 @@
                             <state key="normal" title="SEND">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.79682112068965516" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="sendPressed:" destination="-1" eventType="touchUpInside" id="7xw-Mn-76q"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="0.31489762931034482" colorSpace="calibratedWhite"/>

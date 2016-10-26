@@ -8,9 +8,19 @@
 
 import Foundation
 
-class DataRepository {
+protocol chatRepository {
+    func getAllChats() -> Array<Chat>
+    func totalChats() -> NSInteger
+    func getChatAt(position: NSInteger) -> Chat
+}
+
+protocol userValidator {
+    func totalChattedUsers() -> [String]
+}
+
+class DataRepository: chatRepository, userValidator {
     
-    var chats: NSMutableArray = []
+    var chats: Array = [Chat]()
     
     func fetch(){
         let url = URL(string:"https://s3-eu-west-1.amazonaws.com/rocket-interview/chat.json")
@@ -29,7 +39,7 @@ class DataRepository {
                             for chatDictionary in Dictionary {
                                 if let chatObject = chatDictionary as? [String:Any] {
                                     if let chat = Chat.initWithJson(json: chatObject) {
-                                        self.chats.add(chat)
+                                        self.chats.append(chat)
                                     }
                                 }
                             }
@@ -44,7 +54,7 @@ class DataRepository {
         task.resume()
     }
     
-    func getAll() -> NSArray {
+    func getAllChats() -> Array<Chat> {
         return self.chats
     }
     
@@ -53,6 +63,14 @@ class DataRepository {
     }
     
     func getChatAt(position: NSInteger) -> Chat {
-        return self.chats[position] as! Chat
+        return self.chats[position]
+    }
+    
+    func totalChattedUsers() -> [String] {
+        var contacts : [String] = [String]()
+        for contact in self.chats {
+            contacts.append(contact.username)
+        }
+        return contacts
     }
 }

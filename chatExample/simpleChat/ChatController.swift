@@ -10,18 +10,19 @@
 import Foundation
 import UIKit
 
-class ChatController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var collection: UICollectionView!
-    @IBOutlet weak var collectionFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet weak var table: UITableView!
     @IBOutlet weak var chatBox: UITextField!
     @IBOutlet weak var chatContainer: UIView!
     @IBOutlet weak var sendButton: UIButton!
     
     let username: String
+    let repository: chatRepository
     
-    init(username: String) {
+    init(username: String, repository: chatRepository) {
         self.username = username
+        self.repository = repository
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,15 +35,14 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         self.title = ("Chat - " + username)
         
-        // remove back button
         self.hideBackButton()
-        // add logout button
         self.addLogoutButton()
-        // configure collection
-        self.collectionFlowLayout.estimatedItemSize = CGSize.init(width: self.view.bounds.size.width, height: 50.0)
-        self.collectionFlowLayout.minimumInteritemSpacing = 10.0
-        let nib : UINib = UINib(nibName: "ChatCollectionViewCell", bundle: nil)
-        self.collection.register(nib, forCellWithReuseIdentifier: "ChatCollectionViewCell")
+
+        self.table.rowHeight = UITableViewAutomaticDimension
+        self.table.estimatedRowHeight = 120
+        let nib : UINib = UINib(nibName: "ChatTableViewCell", bundle: nil)
+        self.table.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
+        
         //animations for text and keyboard
     }
     
@@ -51,7 +51,8 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func addLogoutButton() {
-        let logoutButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(logoutPressed))
+        let logoutImage = UIImage(named: "logout")
+        let logoutButton = UIBarButtonItem(image: logoutImage, style: .plain, target: self, action: #selector(logoutPressed))
         self.navigationItem.rightBarButtonItem = logoutButton
     }
     
@@ -64,19 +65,26 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // -- Collection Delegates --
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ChatCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChatCollectionViewCell", for: indexPath) as! ChatCollectionViewCell
-        cell.chatInfo.text = "Raimon - 23:53"
-        cell.conversationText.text = "askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf askjfald jfadlsfkja lñdkfjañlsdkfj añlsdfkj añlsdjkf "
-        return cell
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
+        let chat = self.repository.getChatAt(position: indexPath.section)
+        cell.conversationText.text = chat.content
+        cell.time.text = "\(username) - \(chat.time)"
+        cell.userImage .downloadFrom(link: chat.userImageURL!)
+        cell.userImage.layer.cornerRadius = 20.0
+        cell.userImage.layer.borderWidth = 2.0
+        cell.userImage.layer.borderColor = UIColor.white.cgColor
+        cell.userImage.clipsToBounds = true
+
+        return cell
+    }
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.repository.totalChats()
+    }
 }

@@ -10,9 +10,8 @@
             <connections>
                 <outlet property="chatBox" destination="RYa-7S-A1X" id="P3M-hB-Ml3"/>
                 <outlet property="chatContainer" destination="oeA-8N-JDr" id="s7e-bu-FpJ"/>
-                <outlet property="collection" destination="XXg-og-Ggh" id="51o-Ic-oaz"/>
-                <outlet property="collectionFlowLayout" destination="5A0-3U-SOi" id="hDl-Ny-0X1"/>
                 <outlet property="sendButton" destination="XcP-eV-C2a" id="Ybo-UB-LLK"/>
+                <outlet property="table" destination="LwK-Ac-0Uz" id="GvC-1e-tk2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="D3w-uL-dyp"/>
             </connections>
         </placeholder>
@@ -21,19 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XXg-og-Ggh">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5A0-3U-SOi">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="LwK-Ac-0Uz">
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="iFI-TB-PLa"/>
-                        <outlet property="delegate" destination="-1" id="Par-PF-TVK"/>
+                        <outlet property="dataSource" destination="-1" id="gOH-qe-Ngm"/>
+                        <outlet property="delegate" destination="-1" id="Zlb-se-E2t"/>
                     </connections>
-                </collectionView>
+                </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeA-8N-JDr">
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type something" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYa-7S-A1X">
@@ -64,13 +57,13 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="oeA-8N-JDr" firstAttribute="top" secondItem="XXg-og-Ggh" secondAttribute="bottom" constant="-2" id="3mV-KI-2jS"/>
-                <constraint firstItem="XXg-og-Ggh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5a9-xa-HTu"/>
+                <constraint firstItem="LwK-Ac-0Uz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8wS-Uk-iOJ"/>
                 <constraint firstItem="oeA-8N-JDr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MNE-LS-8J6"/>
-                <constraint firstAttribute="trailing" secondItem="XXg-og-Ggh" secondAttribute="trailing" id="QJP-Ut-erD"/>
+                <constraint firstAttribute="trailing" secondItem="LwK-Ac-0Uz" secondAttribute="trailing" id="gWo-i1-mGk"/>
                 <constraint firstAttribute="bottom" secondItem="oeA-8N-JDr" secondAttribute="bottom" id="mtr-G9-OGx"/>
                 <constraint firstAttribute="trailing" secondItem="oeA-8N-JDr" secondAttribute="trailing" id="muY-Ks-cHa"/>
-                <constraint firstItem="XXg-og-Ggh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="zF3-fS-bZZ"/>
+                <constraint firstItem="oeA-8N-JDr" firstAttribute="top" secondItem="LwK-Ac-0Uz" secondAttribute="bottom" constant="-2" id="oy2-An-2cU"/>
+                <constraint firstItem="LwK-Ac-0Uz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sOC-wD-pfM"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="79.5"/>
         </view>

@@ -43,8 +43,6 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.collectionFlowLayout.minimumInteritemSpacing = 10.0
         let nib : UINib = UINib(nibName: "ChatCollectionViewCell", bundle: nil)
         self.collection.register(nib, forCellWithReuseIdentifier: "ChatCollectionViewCell")
-        //fetch chat info - needs repository
-        
         //animations for text and keyboard
     }
     

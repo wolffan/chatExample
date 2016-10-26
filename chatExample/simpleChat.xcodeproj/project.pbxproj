@@ -23,6 +23,8 @@
 		CDAD44BD1DBD37FC0052BCC9 /* ChatController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAD44BC1DBD37FC0052BCC9 /* ChatController.xib */; };
 		CDAD44BF1DBF374F0052BCC9 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD44BE1DBF374F0052BCC9 /* ChatCollectionViewCell.swift */; };
 		CDAD44C11DBF376E0052BCC9 /* ChatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAD44C01DBF376E0052BCC9 /* ChatCollectionViewCell.xib */; };
+		CDAD44C31DBFFEF70052BCC9 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD44C21DBFFEF70052BCC9 /* DataRepository.swift */; };
+		CDAD44C81DC11B780052BCC9 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD44C71DC11B780052BCC9 /* Chat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		CDAD44BC1DBD37FC0052BCC9 /* ChatController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatController.xib; sourceTree = "<group>"; };
 		CDAD44BE1DBF374F0052BCC9 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
 		CDAD44C01DBF376E0052BCC9 /* ChatCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCollectionViewCell.xib; sourceTree = "<group>"; };
+		CDAD44C21DBFFEF70052BCC9 /* DataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		CDAD44C71DC11B780052BCC9 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,13 +126,9 @@
 				CD4D6AE51DBD1E0500643DBF /* keyboardExtension.swift */,
 				CD4D6AE61DBD1E0500643DBF /* Router.swift */,
 				CDAD44B81DBD24D30052BCC9 /* routingExtension.swift */,
-				CD4D6AE71DBD1E0500643DBF /* userRepository.swift */,
-				CD4D6AE81DBD1E0500643DBF /* ViewController.swift */,
-				CD4D6AE91DBD1E0500643DBF /* ViewController.xib */,
-				CDAD44BA1DBD35FA0052BCC9 /* ChatController.swift */,
-				CDAD44BC1DBD37FC0052BCC9 /* ChatController.xib */,
-				CDAD44BE1DBF374F0052BCC9 /* ChatCollectionViewCell.swift */,
-				CDAD44C01DBF376E0052BCC9 /* ChatCollectionViewCell.xib */,
+				CDAD44C61DC11B610052BCC9 /* Repository */,
+				CDAD44C51DC11B4B0052BCC9 /* Controllers */,
+				CDAD44C41DC11B3F0052BCC9 /* Models */,
 			);
 			path = simpleChat;
 			sourceTree = "<group>";
@@ -150,6 +150,36 @@
 				CD4D6AD81DBD1DA100643DBF /* Info.plist */,
 			);
 			path = simpleChatUITests;
+			sourceTree = "<group>";
+		};
+		CDAD44C41DC11B3F0052BCC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CDAD44C71DC11B780052BCC9 /* Chat.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CDAD44C51DC11B4B0052BCC9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D6AE81DBD1E0500643DBF /* ViewController.swift */,
+				CD4D6AE91DBD1E0500643DBF /* ViewController.xib */,
+				CDAD44BA1DBD35FA0052BCC9 /* ChatController.swift */,
+				CDAD44BC1DBD37FC0052BCC9 /* ChatController.xib */,
+				CDAD44BE1DBF374F0052BCC9 /* ChatCollectionViewCell.swift */,
+				CDAD44C01DBF376E0052BCC9 /* ChatCollectionViewCell.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CDAD44C61DC11B610052BCC9 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CD4D6AE71DBD1E0500643DBF /* userRepository.swift */,
+				CDAD44C21DBFFEF70052BCC9 /* DataRepository.swift */,
+			);
+			name = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,9 +325,11 @@
 				CDAD44B91DBD24D30052BCC9 /* routingExtension.swift in Sources */,
 				CD4D6AEE1DBD1E0500643DBF /* ViewController.swift in Sources */,
 				CD4D6AEB1DBD1E0500643DBF /* keyboardExtension.swift in Sources */,
+				CDAD44C81DC11B780052BCC9 /* Chat.swift in Sources */,
 				CD4D6AEC1DBD1E0500643DBF /* Router.swift in Sources */,
 				CD4D6AED1DBD1E0500643DBF /* userRepository.swift in Sources */,
 				CDAD44BB1DBD35FA0052BCC9 /* ChatController.swift in Sources */,
+				CDAD44C31DBFFEF70052BCC9 /* DataRepository.swift in Sources */,
 				CDAD44BF1DBF374F0052BCC9 /* ChatCollectionViewCell.swift in Sources */,
 				CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */,
 			);

@@ -17,14 +17,17 @@ class Router {
     let navigation : UINavigationController
     let window : UIWindow
     let userRepo : userStorage
+    let dataRepo : DataRepository
     
     init?(window: UIWindow?) {
         guard let validWindow = window else {
             return nil
         }
         self.userRepo = userRepository()
+        self.dataRepo = DataRepository()
+        self.dataRepo.fetch()
+
         self.window = validWindow
-        // restore session
         let (hasSession, username) = Router.hasStoredSession(userRepo: self.userRepo)
         self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo))
         if hasSession {

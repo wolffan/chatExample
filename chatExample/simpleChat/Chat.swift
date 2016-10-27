@@ -14,10 +14,14 @@ class Chat {
     let userImageURL: URL?
     let time: String
     
-    init(username: String, content: String, userImage: String, time: String) {
+    init(username: String, content: String, userImage: String?, time: String) {
         self.username = username
         self.content = content
-        self.userImageURL = URL.init(string: userImage)
+        if let image = userImage {
+            self.userImageURL = URL.init(string: image)
+        } else {
+            self.userImageURL = nil
+        }
         self.time = time
     }
     

@@ -10,12 +10,14 @@
 import Foundation
 import UIKit
 
-class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSource, keyboardAnimations, UITextFieldDelegate {
     
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var chatBox: UITextField!
     @IBOutlet weak var chatContainer: UIView!
     @IBOutlet weak var sendButton: UIButton!
+    
+    @IBOutlet weak var bottomSpaceToChatBox: NSLayoutConstraint!
     
     let username: String
     let repository: chatRepository
@@ -37,13 +39,20 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.hideBackButton()
         self.addLogoutButton()
-
+        self.configureTable()
+        self.registerForKeyboard()
+        self.configureTextBox()
+    }
+    
+    func configureTextBox() {
+        self.chatBox.layer.cornerRadius = 5.0
+    }
+    
+    func configureTable() {
         self.table.rowHeight = UITableViewAutomaticDimension
         self.table.estimatedRowHeight = 120
         let nib : UINib = UINib(nibName: "ChatTableViewCell", bundle: nil)
         self.table.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
-        
-        //animations for text and keyboard
     }
     
     func hideBackButton() {
@@ -57,10 +66,37 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func logoutPressed() {
+        self.deregisterKeyboard()
         self.userlogout()
     }
     
     @IBAction func sendPressed(_ sender: AnyObject) {
+        self.chatBox.resignFirstResponder()
+        if let text = self.chatBox.text, text != "" {
+            self.addChat(text:text)
+            self.table.reloadData()
+            let lastElement = self.repository.totalChats() - 1
+            let indexPath = IndexPath(item: 0, section: lastElement)
+            self.table.scrollToRow(at: indexPath, at: UITableViewScrollPosition.bottom, animated: true)
+        }
+    }
+    
+    func animateKeyboardChange(height: Float) {
+        self.bottomSpaceToChatBox.constant += CGFloat(height)
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let text = textField.text, text == "" {
+            return false
+        }
+        return true
+    }
+    
+    func addChat(text: String) {
+        self.repository.addChat(user: self.username, text: text)
     }
     
     // -- Collection Delegates --
@@ -73,12 +109,15 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
         let chat = self.repository.getChatAt(position: indexPath.section)
         cell.conversationText.text = chat.content
-        cell.time.text = "\(username) - \(chat.time)"
-        cell.userImage .downloadFrom(link: chat.userImageURL!)
-        cell.userImage.layer.cornerRadius = 20.0
-        cell.userImage.layer.borderWidth = 2.0
-        cell.userImage.layer.borderColor = UIColor.white.cgColor
-        cell.userImage.clipsToBounds = true
+        cell.time.text = "\(chat.username) - \(chat.time)"
+        if let image = chat.userImageURL {
+            cell.userImage .downloadFrom(link: image)
+            cell.userImage.layer.cornerRadius = 20.0
+            cell.userImage.layer.borderWidth = 2.0
+            cell.userImage.layer.borderColor = UIColor.white.cgColor
+            cell.userImage.clipsToBounds = true
+        }
+
 
         return cell
     }

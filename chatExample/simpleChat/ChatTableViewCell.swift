@@ -15,10 +15,6 @@ class ChatTableViewCell: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var time: UILabel!
     
-    override func awakeFromNib() {
-        self.userImage.layer.cornerRadius = 15.0
-    }
-    
     override func prepareForReuse() {
         time.text = ""
         conversationText.text = ""

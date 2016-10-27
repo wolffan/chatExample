@@ -35,7 +35,7 @@ extension UIViewController : keyboardRegistration {
         if let controller = self as? keyboardAnimations {
             if let info = notification.userInfo {
                 let keyboardFrame : CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-                let newBottomDistance = Float(keyboardFrame.size.height) + 20.0
+                let newBottomDistance = Float(keyboardFrame.size.height)
                 controller.animateKeyboardChange(height: newBottomDistance)
             }
         }
@@ -45,7 +45,7 @@ extension UIViewController : keyboardRegistration {
         if let controller = self as? keyboardAnimations {
             if let info = notification.userInfo {
                 let keyboardFrame : CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-                let newBottomDistance = 0 - (Float(keyboardFrame.size.height) + 20.0)
+                let newBottomDistance = 0 - Float(keyboardFrame.size.height)
                 controller.animateKeyboardChange(height: newBottomDistance)
             }
         }

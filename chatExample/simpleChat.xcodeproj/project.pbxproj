@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CD4D6ABE1DBD1DA000643DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6ABD1DBD1DA000643DBF /* Assets.xcassets */; };
 		CD4D6AC11DBD1DA000643DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6ABF1DBD1DA000643DBF /* LaunchScreen.storyboard */; };
-		CD4D6ACC1DBD1DA000643DBF /* simpleChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6ACB1DBD1DA000643DBF /* simpleChatTests.swift */; };
 		CD4D6AD71DBD1DA000643DBF /* simpleChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AD61DBD1DA000643DBF /* simpleChatUITests.swift */; };
 		CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */; };
 		CD4D6AEB1DBD1E0500643DBF /* keyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE51DBD1E0500643DBF /* keyboardExtension.swift */; };
@@ -26,6 +25,7 @@
 		CDAD44BD1DBD37FC0052BCC9 /* ChatController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDAD44BC1DBD37FC0052BCC9 /* ChatController.xib */; };
 		CDAD44C31DBFFEF70052BCC9 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD44C21DBFFEF70052BCC9 /* DataRepository.swift */; };
 		CDAD44C81DC11B780052BCC9 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAD44C71DC11B780052BCC9 /* Chat.swift */; };
+		CDCEC30B1DC1D7BE002B7549 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC30A1DC1D7BE002B7549 /* DateHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		CD4D6AC01DBD1DA000643DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4D6AC21DBD1DA000643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4D6AC71DBD1DA000643DBF /* simpleChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD4D6ACB1DBD1DA000643DBF /* simpleChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleChatTests.swift; sourceTree = "<group>"; };
 		CD4D6ACD1DBD1DA000643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4D6AD21DBD1DA000643DBF /* simpleChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6AD61DBD1DA000643DBF /* simpleChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleChatUITests.swift; sourceTree = "<group>"; };
@@ -71,6 +70,7 @@
 		CDAD44BC1DBD37FC0052BCC9 /* ChatController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatController.xib; sourceTree = "<group>"; };
 		CDAD44C21DBFFEF70052BCC9 /* DataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		CDAD44C71DC11B780052BCC9 /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		CDCEC30A1DC1D7BE002B7549 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,6 @@
 		CD4D6ACA1DBD1DA000643DBF /* simpleChatTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD4D6ACB1DBD1DA000643DBF /* simpleChatTests.swift */,
 				CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */,
 				CD4D6ACD1DBD1DA000643DBF /* Info.plist */,
 			);
@@ -181,6 +180,7 @@
 				CD4D6AE71DBD1E0500643DBF /* userRepository.swift */,
 				CDAD44C21DBFFEF70052BCC9 /* DataRepository.swift */,
 				CD955F2C1DC16FFF0032EE3D /* imageLoader.swift */,
+				CDCEC30A1DC1D7BE002B7549 /* DateHelper.swift */,
 			);
 			name = Repository;
 			sourceTree = "<group>";
@@ -334,6 +334,7 @@
 				CD4D6AED1DBD1E0500643DBF /* userRepository.swift in Sources */,
 				CDAD44BB1DBD35FA0052BCC9 /* ChatController.swift in Sources */,
 				CDAD44C31DBFFEF70052BCC9 /* DataRepository.swift in Sources */,
+				CDCEC30B1DC1D7BE002B7549 /* DateHelper.swift in Sources */,
 				CD955F291DC15E600032EE3D /* ChatTableViewCell.swift in Sources */,
 				CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */,
 			);
@@ -343,7 +344,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4D6ACC1DBD1DA000643DBF /* simpleChatTests.swift in Sources */,
 				CD4D6AF11DBD228D00643DBF /* userRepositoryIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,7 @@ protocol chatRepository {
     func getAllChats() -> Array<Chat>
     func totalChats() -> NSInteger
     func getChatAt(position: NSInteger) -> Chat
+    func addChat(user: String, text: String)
 }
 
 protocol userValidator {
@@ -72,5 +73,12 @@ class DataRepository: chatRepository, userValidator {
             contacts.append(contact.username)
         }
         return contacts
+    }
+    
+    func addChat(user: String, text: String) {
+        let date = Date()
+        let time = DateHelper.getHourTime(date: date)
+        let chat = Chat(username: user, content: text, userImage: nil, time: time)
+        self.chats.append(chat)
     }
 }

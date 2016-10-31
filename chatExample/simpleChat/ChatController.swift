@@ -51,8 +51,11 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func configureTable() {
         self.table.rowHeight = UITableViewAutomaticDimension
         self.table.estimatedRowHeight = 120
-        let nib : UINib = UINib(nibName: "ChatTableViewCell", bundle: nil)
+        var nib : UINib = UINib(nibName: "ChatTableViewCell", bundle: nil)
         self.table.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
+        nib = UINib(nibName: "MeChatTableViewCell", bundle: nil)
+        self.table.register(nib, forCellReuseIdentifier: "MeChatTableViewCell")
+        
     }
     
     func hideBackButton() {
@@ -106,20 +109,22 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
         let chat = self.repository.getChatAt(position: indexPath.section)
-        cell.conversationText.text = chat.content
-        cell.time.text = "\(chat.username) - \(chat.time)"
-        if let image = chat.userImageURL {
-            cell.userImage .downloadFrom(link: image)
-            cell.userImage.layer.cornerRadius = 20.0
-            cell.userImage.layer.borderWidth = 2.0
-            cell.userImage.layer.borderColor = UIColor.white.cgColor
-            cell.userImage.clipsToBounds = true
+        if chat.username == self.username {
+            let cell: MeChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: "MeChatTableViewCell", for: indexPath) as! MeChatTableViewCell
+            cell.conversationText.text = chat.content
+            cell.time.text = "\(chat.username) - \(chat.time)"
+            return cell
+
+        } else {
+            let cell: ChatTableViewCell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
+            cell.conversationText.text = chat.content
+            cell.time.text = "\(chat.username) - \(chat.time)"
+            if let image = chat.userImageURL {
+                cell.userImage.downloadFrom(link: image)
+            }
+            return cell
         }
-
-
-        return cell
     }
     
     

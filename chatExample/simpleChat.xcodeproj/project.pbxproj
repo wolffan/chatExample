@@ -17,6 +17,8 @@
 		CD4D6AEE1DBD1E0500643DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE81DBD1E0500643DBF /* ViewController.swift */; };
 		CD4D6AEF1DBD1E0500643DBF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6AE91DBD1E0500643DBF /* ViewController.xib */; };
 		CD4D6AF11DBD228D00643DBF /* userRepositoryIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */; };
+		CD88EF961DC729E90023FD5F /* MeChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */; };
+		CD88EF981DC729F70023FD5F /* MeChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */; };
 		CD955F291DC15E600032EE3D /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD955F281DC15E600032EE3D /* ChatTableViewCell.swift */; };
 		CD955F2B1DC15E740032EE3D /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD955F2A1DC15E740032EE3D /* ChatTableViewCell.xib */; };
 		CD955F2D1DC16FFF0032EE3D /* imageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD955F2C1DC16FFF0032EE3D /* imageLoader.swift */; };
@@ -63,6 +65,8 @@
 		CD4D6AE81DBD1E0500643DBF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD4D6AE91DBD1E0500643DBF /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepositoryIntegrationTests.swift; sourceTree = "<group>"; };
+		CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeChatTableViewCell.swift; sourceTree = "<group>"; };
+		CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeChatTableViewCell.xib; sourceTree = "<group>"; };
 		CD955F281DC15E600032EE3D /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		CD955F2A1DC15E740032EE3D /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		CD955F2C1DC16FFF0032EE3D /* imageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageLoader.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 		CD4D6AB51DBD1DA000643DBF /* simpleChat */ = {
 			isa = PBXGroup;
 			children = (
+				CD88EF941DC729CB0023FD5F /* Views */,
 				CD4D6ABD1DBD1DA000643DBF /* Assets.xcassets */,
 				CD4D6ABF1DBD1DA000643DBF /* LaunchScreen.storyboard */,
 				CD4D6AC21DBD1DA000643DBF /* Info.plist */,
@@ -156,6 +161,17 @@
 			path = simpleChatUITests;
 			sourceTree = "<group>";
 		};
+		CD88EF941DC729CB0023FD5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD955F281DC15E600032EE3D /* ChatTableViewCell.swift */,
+				CD955F2A1DC15E740032EE3D /* ChatTableViewCell.xib */,
+				CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */,
+				CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		CDAD44C41DC11B3F0052BCC9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,8 +187,6 @@
 				CD4D6AE91DBD1E0500643DBF /* ViewController.xib */,
 				CDAD44BA1DBD35FA0052BCC9 /* ChatController.swift */,
 				CDAD44BC1DBD37FC0052BCC9 /* ChatController.xib */,
-				CD955F281DC15E600032EE3D /* ChatTableViewCell.swift */,
-				CD955F2A1DC15E740032EE3D /* ChatTableViewCell.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +318,7 @@
 				CD4D6AEF1DBD1E0500643DBF /* ViewController.xib in Resources */,
 				CD4D6ABE1DBD1DA000643DBF /* Assets.xcassets in Resources */,
 				CDAD44BD1DBD37FC0052BCC9 /* ChatController.xib in Resources */,
+				CD88EF981DC729F70023FD5F /* MeChatTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +347,7 @@
 				CD4D6AEE1DBD1E0500643DBF /* ViewController.swift in Sources */,
 				CD4D6AEB1DBD1E0500643DBF /* keyboardExtension.swift in Sources */,
 				CDAD44C81DC11B780052BCC9 /* Chat.swift in Sources */,
+				CD88EF961DC729E90023FD5F /* MeChatTableViewCell.swift in Sources */,
 				CD955F2D1DC16FFF0032EE3D /* imageLoader.swift in Sources */,
 				CD4D6AEC1DBD1E0500643DBF /* Router.swift in Sources */,
 				CD4D6AED1DBD1E0500643DBF /* userRepository.swift in Sources */,

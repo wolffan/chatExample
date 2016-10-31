@@ -18,7 +18,7 @@ class Chat {
         self.username = username
         self.content = content
         if let image = userImage {
-            self.userImageURL = URL.init(string: image)
+            self.userImageURL = URL.init(string: Chat.filterHttp(url: image))
         } else {
             self.userImageURL = nil
         }
@@ -31,5 +31,12 @@ class Chat {
             return chat
         }
         return nil
+    }
+    
+    class func filterHttp(url: String) -> String {
+        if url.range(of: "http:") != nil {
+            return url.replacingOccurrences(of: "http:", with: "https:")
+        }
+        return url
     }
 }

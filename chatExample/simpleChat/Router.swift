@@ -18,6 +18,7 @@ class Router {
     let window : UIWindow
     let userRepo : userStorage
     let dataRepo : DataRepository
+    let userCheck : UserCheck
     
     init?(window: UIWindow?) {
         guard let validWindow = window else {
@@ -26,10 +27,11 @@ class Router {
         self.userRepo = userRepository()
         self.dataRepo = DataRepository()
         self.dataRepo.fetch()
+        self.userCheck = UserCheck.init(userList: self.dataRepo)
 
         self.window = validWindow
         let (hasSession, username) = Router.hasStoredSession(userRepo: self.userRepo)
-        self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo))
+        self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo, userCheck: self.userCheck))
         if hasSession {
             self.loginFinishedWithUser(username: username!, animated: false)
         }
@@ -40,8 +42,8 @@ class Router {
         self.window.makeKeyAndVisible()
     }
     
-    class func createLogin(userRepo : userStorage) -> ViewController {
-        let login = ViewController()
+    class func createLogin(userRepo : userStorage, userCheck: UserCheck) -> ViewController {
+        let login = ViewController(userVaildator:userCheck)
         return login
     }
     

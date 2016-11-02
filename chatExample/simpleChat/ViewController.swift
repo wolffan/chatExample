@@ -17,6 +17,17 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var messageImage: UIImageView!
     
+    let userCheck: UserCheck
+    
+    init(userVaildator: UserCheck) {
+        self.userCheck = userVaildator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,12 +35,18 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
         self.usernameField.layer.cornerRadius = 5.0
         
         self.registerForKeyboard()
+        
+        self.navigationController?.isNavigationBarHidden = true
     }
 
     @IBAction func loginButtonPressed(_ sender: AnyObject) {
         self.usernameField.resignFirstResponder()
-        if let username = usernameField.text {
+        if let username = usernameField.text, self.userCheck.validUser(username: username) {
             self.finisWithUsername(username: username)
+        } else {
+            //alert user
+            usernameField.text = ""
+            usernameField.placeholder = "Please use different username"
         }
     }
     
@@ -46,6 +63,5 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
             self.view.layoutIfNeeded()
         })
     }
-
 }
 

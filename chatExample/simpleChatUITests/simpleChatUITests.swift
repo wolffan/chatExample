@@ -28,9 +28,54 @@ class simpleChatUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUserCantBeNilOnLogin() {
+        
+        let app = XCUIApplication()
+        app.buttons["LOGIN"].tap()
+        XCTAssertNotNil(app.textFields["Please use different username"])
+
     }
     
+    func testUsernameCantBeOneOfTheExistingOnBackend() {
+        
+        let app = XCUIApplication()
+        let firstNameLastNameTextField = app.textFields["First Name & Last Name"]
+        firstNameLastNameTextField.tap()
+        firstNameLastNameTextField.typeText("Olivia")
+        app.buttons["LOGIN"].tap()
+        XCTAssertNotNil(app.textFields["Please use different username"])
+    }
+    
+    func testUsernameValidMovesToNextScreen() {
+        
+        let app = XCUIApplication()
+        let firstNameLastNameTextField = app.textFields["First Name & Last Name"]
+        firstNameLastNameTextField.tap()
+        firstNameLastNameTextField.typeText("Raimon")
+        app.buttons["LOGIN"].tap()
+        XCTAssertNotNil(XCUIApplication().navigationBars["Chat - Raimon"].staticTexts["Chat - Raimon"])
+    }
+    
+    func testTypingAndSendingMessageDisplaysOnConversation() {
+        
+        let app = XCUIApplication()
+        let firstNameLastNameTextField = app.textFields["First Name & Last Name"]
+        firstNameLastNameTextField.tap()
+        firstNameLastNameTextField.typeText("Rai")
+        app.buttons["LOGIN"].tap()
+        
+        let typeSomethingTextField = app.textFields["Type something"]
+        typeSomethingTextField.tap()
+        typeSomethingTextField.typeText("hello all")
+        app.buttons["SEND"].tap()
+        XCTAssertNotNil(app.tables.staticTexts["hello all"])
+    }
+    
+    func testLogoutReturnsToFirstScreen() {
+        
+        let app = XCUIApplication()
+        app.navigationBars["Chat - Rai"].buttons["logout"].tap()
+        XCTAssertNotNil(app.staticTexts["Type your name"])
+        
+    }
 }

@@ -42,6 +42,9 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.configureTable()
         self.registerForKeyboard()
         self.configureTextBox()
+        
+        self.navigationController?.isNavigationBarHidden = false
+
     }
     
     func configureTextBox() {

@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="338" height="208"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fCI-13-Le9" id="nd8-zA-7fg">
-                <frame key="frameInset" width="338" height="207"/>
+                <frame key="frameInset" width="338" height="208"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fo-fQ-vqa">
@@ -28,8 +28,8 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="HT5-6b-m92"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.28161171054143386" green="0.28361964027787029" blue="0.28964342948717947" alpha="0.47400323275862066" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="148" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXu-BX-BE6">

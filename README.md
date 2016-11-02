@@ -8,6 +8,6 @@ Tests will run with CMD+U
 Overall architecture:
 
 Router that handles all dependencies and controllers.
+Controllers talk to extending Router methods in order to not have hidden dependencies between them
+Cells have viewModel to abstract the presentation logic from Controller and Cell
 Data is fetched and injected through Repositories with different protocols so each class has only the data it needs.
-Missing: Controllers and cells should not get injected the repository but a ViewModel with the repository.
-Missing: When "login" there's a repository that will thell if the user exists or not (needs some ui, repository is done)

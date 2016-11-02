@@ -116,9 +116,9 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let chat = self.repository.getChatAt(position: indexPath.section)
-        let viewModel = ChatViewModel.init(chat: chat)
+        let viewModel = ChatViewModel.init(chat: chat,username:self.username)
         var cell : conversationCell
-        if chat.username == self.username {
+        if viewModel.me {
             cell = tableView.dequeueReusableCell(withIdentifier: "MeChatTableViewCell", for: indexPath) as! MeChatTableViewCell
             cell.configWith(viewModel:viewModel)
         } else {

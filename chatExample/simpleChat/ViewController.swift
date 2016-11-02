@@ -39,6 +39,8 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
     }
     
     func animateKeyboardChange(height: Float) {
+        if self.bottomDistance.constant < 0 && height > 0 { return }
+        
         self.bottomDistance.constant -= CGFloat(height)
         UIView.animate(withDuration: 0.2, animations: {
             self.view.layoutIfNeeded()

@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="338" height="208"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cVK-Vu-2cg" id="8Lw-eS-dvH">
-                <frame key="frameInset" width="338" height="207"/>
+                <frame key="frameInset" width="338" height="208"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bhz-o6-SxV">
@@ -35,8 +35,8 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="2rw-0I-6Ge" secondAttribute="trailing" constant="8" id="0nH-rf-Wbb"/>
                     <constraint firstAttribute="bottomMargin" secondItem="2rw-0I-6Ge" secondAttribute="bottom" constant="7" id="1jo-A1-bDr"/>
-                    <constraint firstItem="2rw-0I-6Ge" firstAttribute="leading" secondItem="8Lw-eS-dvH" secondAttribute="leadingMargin" constant="88" id="3tv-WG-QED"/>
                     <constraint firstItem="Bhz-o6-SxV" firstAttribute="centerX" secondItem="4Wx-0S-66Q" secondAttribute="centerX" id="9ZD-RO-mA9"/>
                     <constraint firstItem="2rw-0I-6Ge" firstAttribute="top" secondItem="4Wx-0S-66Q" secondAttribute="bottom" constant="7" id="Hw5-UO-LhU"/>
                     <constraint firstItem="4Wx-0S-66Q" firstAttribute="top" secondItem="8Lw-eS-dvH" secondAttribute="topMargin" constant="7" id="RcD-1n-Wce"/>

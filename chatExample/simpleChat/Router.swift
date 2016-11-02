@@ -71,6 +71,7 @@ class Router {
     
     func logout() {
         self.userRepo.removeUser()
+        self.navigation.isNavigationBarHidden = true
         self.navigation.popViewController(animated: true)
     }
 }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MeChatTableViewCell: UITableViewCell {
+class MeChatTableViewCell: conversationCell {
     
     @IBOutlet weak var conversationText: UILabel!
     @IBOutlet weak var time: UILabel!
@@ -22,6 +22,11 @@ class MeChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         self.backgroundRound.layer.cornerRadius = 10.0
+    }
+    
+    override func configWith(viewModel:ChatViewModel) {
+        self.conversationText.text = viewModel.conversation
+        self.time.text = viewModel.time
     }
 }
 

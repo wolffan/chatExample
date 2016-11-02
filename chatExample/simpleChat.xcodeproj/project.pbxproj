@@ -19,6 +19,7 @@
 		CD4D6AF11DBD228D00643DBF /* userRepositoryIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */; };
 		CD88EF961DC729E90023FD5F /* MeChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */; };
 		CD88EF981DC729F70023FD5F /* MeChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */; };
+		CD88EF9A1DC9CE750023FD5F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF991DC9CE750023FD5F /* ChatViewModel.swift */; };
 		CD955F291DC15E600032EE3D /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD955F281DC15E600032EE3D /* ChatTableViewCell.swift */; };
 		CD955F2B1DC15E740032EE3D /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD955F2A1DC15E740032EE3D /* ChatTableViewCell.xib */; };
 		CD955F2D1DC16FFF0032EE3D /* imageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD955F2C1DC16FFF0032EE3D /* imageLoader.swift */; };
@@ -67,6 +68,7 @@
 		CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepositoryIntegrationTests.swift; sourceTree = "<group>"; };
 		CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeChatTableViewCell.swift; sourceTree = "<group>"; };
 		CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeChatTableViewCell.xib; sourceTree = "<group>"; };
+		CD88EF991DC9CE750023FD5F /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		CD955F281DC15E600032EE3D /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		CD955F2A1DC15E740032EE3D /* ChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		CD955F2C1DC16FFF0032EE3D /* imageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageLoader.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				CD955F2A1DC15E740032EE3D /* ChatTableViewCell.xib */,
 				CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */,
 				CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */,
+				CD88EF991DC9CE750023FD5F /* ChatViewModel.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				CD955F2D1DC16FFF0032EE3D /* imageLoader.swift in Sources */,
 				CD4D6AEC1DBD1E0500643DBF /* Router.swift in Sources */,
 				CD4D6AED1DBD1E0500643DBF /* userRepository.swift in Sources */,
+				CD88EF9A1DC9CE750023FD5F /* ChatViewModel.swift in Sources */,
 				CDAD44BB1DBD35FA0052BCC9 /* ChatController.swift in Sources */,
 				CDAD44C31DBFFEF70052BCC9 /* DataRepository.swift in Sources */,
 				CDCEC30B1DC1D7BE002B7549 /* DateHelper.swift in Sources */,

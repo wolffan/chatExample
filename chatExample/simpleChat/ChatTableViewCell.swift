@@ -9,7 +9,11 @@
 import Foundation
 import UIKit
 
-class ChatTableViewCell: UITableViewCell {
+class conversationCell : UITableViewCell {
+    func configWith(viewModel:ChatViewModel) {}
+}
+
+class ChatTableViewCell: conversationCell {
     
     @IBOutlet weak var conversationText: UILabel!
     @IBOutlet weak var userImage: UIImageView!
@@ -25,5 +29,13 @@ class ChatTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         self.backgroundRound.layer.cornerRadius = 10.0
+    }
+    
+    override func configWith(viewModel:ChatViewModel) {
+        self.conversationText.text = viewModel.conversation
+        self.time.text = viewModel.time
+        if let image = viewModel.logo {
+            self.userImage.downloadFrom(link: image)
+        }
     }
 }

@@ -7,22 +7,27 @@
 //
 
 import XCTest
+import Foundation
 
 class simpleChatUITests: XCTestCase {
-        
+    
     override func setUp() {
         super.setUp()
+        
+        let storage = UserDefaults.init()
+        let userKey = "chat.Example.User"
+        storage.set(nil, forKey: userKey)
+        storage.synchronize()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        continueAfterFailure = true
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
     }
     
     override func tearDown() {
-        self.logout()
         super.tearDown()
     }
     
@@ -49,9 +54,11 @@ class simpleChatUITests: XCTestCase {
         let app = XCUIApplication()
         let firstNameLastNameTextField = app.textFields["First Name & Last Name"]
         firstNameLastNameTextField.tap()
-        firstNameLastNameTextField.typeText("Raimon")
+        firstNameLastNameTextField.typeText("Rai")
         app.buttons["LOGIN"].tap()
-        XCTAssertNotNil(XCUIApplication().navigationBars["Chat - Raimon"].staticTexts["Chat - Raimon"])
+        XCTAssertNotNil(XCUIApplication().navigationBars["Chat - Rai"])
+        self.logout()
+
     }
     
     func testTypingAndSendingMessageDisplaysOnConversation() {
@@ -67,6 +74,8 @@ class simpleChatUITests: XCTestCase {
         typeSomethingTextField.typeText("hello all")
         app.buttons["SEND"].tap()
         XCTAssertNotNil(app.tables.staticTexts["hello all"])
+        self.logout()
+
     }
     
     func testLogoutReturnsToFirstScreen() {

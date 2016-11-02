@@ -9,7 +9,6 @@
 import XCTest
 @testable import simpleChat
 
-
 class UserValidatorStub: userValidator {
     func totalChattedUsers() -> [String] {
         return ["Morgan","Chris","Jhon","Julie","Marso","Joanna","Phil","Garfield"]

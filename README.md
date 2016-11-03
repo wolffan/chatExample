@@ -1,5 +1,5 @@
 # chatExample
-[![Build Status](https://travis-ci.org/opencontainers/image-tools.svg?branch=master)](https://travis-ci.org/opencontainers/image-tools)
+[![Build Status](https://travis-ci.org/wolffan/chatExample.svg?branch=master)](https://travis-ci.org/wolffan/chatExample)
 Example of a chat conversation UI
 
 No dependenceis are needed to run the project.

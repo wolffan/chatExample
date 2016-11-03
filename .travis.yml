@@ -1,5 +1,5 @@
 language: swift
-xcode_project: simpleChat/simpleChat.xcodeproj # path to your xcodeproj folder
+xcode_project: chatExample/simpleChat.xcodeproj # path to your xcodeproj folder
 xcode_scheme: simpleChatTests
 osx_image: xcode8
 xcode_sdk: iphonesimulator8.1

@@ -4,7 +4,7 @@ Example of a chat conversation UI
 
 No dependenceis are needed to run the project.
 Tests will run with CMD+U
-
+To Run UI tests, access the file and manually run tests, UI tests fail on command line execution
 Overall architecture:
 
 Router that handles all dependencies and controllers.

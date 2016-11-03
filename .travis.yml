@@ -2,4 +2,4 @@ language: objective-c
 xcode_project: chatExample/simpleChat.xcodeproj # path to your xcodeproj folder
 xcode_scheme: simpleChat
 osx_image: xcode8
-script: xcodebuild -scheme "simpleChat" -project "chatExample/simpleChat.xcodeproj" build test  
+script: xcodebuild -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0" -scheme "simpleChat" -project "chatExample/simpleChat.xcodeproj" build test  

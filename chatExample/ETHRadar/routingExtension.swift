@@ -27,7 +27,7 @@ protocol logoutUser {
     func userlogout()
 }
 
-extension ChatController: logoutUser {
+extension TokenController: logoutUser {
     func userlogout() {
         let app = UIApplication.shared.delegate as! AppDelegate
         if let router = app.router {

@@ -10,7 +10,7 @@
 import Foundation
 import UIKit
 
-class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSource, keyboardAnimations, UITextFieldDelegate {
+class TokenController: UIViewController, UITableViewDelegate, UITableViewDataSource, keyboardAnimations, UITextFieldDelegate {
     
     @IBOutlet weak var table: UITableView!
     @IBOutlet weak var chatBox: UITextField!
@@ -35,63 +35,63 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = ("Chat - " + username)
+        title = NSLocalizedString("Token.Title", comment: "")
         
-        self.hideBackButton()
-        self.addLogoutButton()
-        self.configureTable()
-        self.registerForKeyboard()
-        self.configureTextBox()
+        hideBackButton()
+        addLogoutButton()
+        configureTable()
+        registerForKeyboard()
+        configureTextBox()
         
-        self.navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
 
     }
     
     func configureTextBox() {
-        self.chatBox.layer.cornerRadius = 5.0
+        chatBox.layer.cornerRadius = 5.0
     }
     
     func configureTable() {
-        self.table.rowHeight = UITableViewAutomaticDimension
-        self.table.estimatedRowHeight = 120
+        table.rowHeight = UITableViewAutomaticDimension
+        table.estimatedRowHeight = 120
         var nib : UINib = UINib(nibName: "ChatTableViewCell", bundle: nil)
-        self.table.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
+        table.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
         nib = UINib(nibName: "MeChatTableViewCell", bundle: nil)
-        self.table.register(nib, forCellReuseIdentifier: "MeChatTableViewCell")
+        table.register(nib, forCellReuseIdentifier: "MeChatTableViewCell")
         
     }
     
     func hideBackButton() {
-        self.navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
     }
     
     func addLogoutButton() {
         let logoutImage = UIImage(named: "logout")
         let logoutButton = UIBarButtonItem(image: logoutImage, style: .plain, target: self, action: #selector(logoutPressed))
-        self.navigationItem.rightBarButtonItem = logoutButton
+        navigationItem.rightBarButtonItem = logoutButton
     }
     
     @objc func logoutPressed() {
-        self.deregisterKeyboard()
-        self.userlogout()
+        deregisterKeyboard()
+        userlogout()
     }
     
     @IBAction func sendPressed(_ sender: AnyObject) {
-        self.chatBox.resignFirstResponder()
-        if let text = self.chatBox.text, text != "" {
-            self.addChat(text:text)
-            self.table.reloadData()
+        chatBox.resignFirstResponder()
+        if let text = chatBox.text, text != "" {
+            addChat(text:text)
+            table.reloadData()
             
             //do on becomefirstresponder
             let lastElement = self.repository.totalChats() - 1
             let indexPath = IndexPath(item: 0, section: lastElement)
-            self.table.scrollToRow(at: indexPath, at: UITableViewScrollPosition.bottom, animated: true)
+            table.scrollToRow(at: indexPath, at: UITableViewScrollPosition.bottom, animated: true)
         }
-        self.chatBox.text = ""
+        chatBox.text = ""
     }
     
     func animateKeyboardChange(height: Float) {
-        self.bottomSpaceToChatBox.constant += CGFloat(height)
+        bottomSpaceToChatBox.constant += CGFloat(height)
         UIView.animate(withDuration: 0.2, animations: {
             self.view.layoutIfNeeded()
         })
@@ -105,7 +105,7 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func addChat(text: String) {
-        self.repository.addChat(user: self.username, text: text)
+        repository.addChat(user: self.username, text: text)
     }
     
     // -- Collection Delegates --

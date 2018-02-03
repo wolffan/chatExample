@@ -28,14 +28,14 @@ class ChatTableViewCell: conversationCell {
     }
     
     override func awakeFromNib() {
-        self.backgroundRound.layer.cornerRadius = 10.0
+        backgroundRound.layer.cornerRadius = 10.0
     }
     
     override func configWith(viewModel:ChatViewModel) {
-        self.conversationText.text = viewModel.conversation
-        self.time.text = viewModel.time
+        conversationText.text = viewModel.conversation
+        time.text = viewModel.time
         if let image = viewModel.logo {
-            self.userImage.downloadFrom(link: image)
+            userImage.downloadFrom(link: image)
         }
     }
 }

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  ETHRadar
+
+  Created by Raimon Lapuente Ferran on 03/02/2018.
+  Copyright © 2018 Raimon Lapuente. All rights reserved.
+*/
+
+"Token.Title" = "ERC-20 Tokens";
+

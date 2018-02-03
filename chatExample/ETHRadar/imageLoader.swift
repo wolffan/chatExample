@@ -15,8 +15,10 @@ extension UIImageView
     {
         URLSession.shared.dataTask(with: link as URL, completionHandler: { (data, _, error) -> Void in
             guard let data = data , error == nil else {
-                self.isHidden = true
-                self.layoutSubviews()
+                DispatchQueue.main.async {
+                    self.isHidden = true
+                    self.layoutSubviews()
+                }
                 return
             }
             DispatchQueue.main.async() { () -> Void in
@@ -33,9 +35,9 @@ extension UIImageView
     }
     
     func configureImageView() {
-        self.layer.cornerRadius = 20.0
-        self.layer.borderWidth = 2.0
-        self.layer.borderColor = UIColor.white.cgColor
-        self.clipsToBounds = true
+        layer.cornerRadius = 20.0
+        layer.borderWidth = 2.0
+        layer.borderColor = UIColor.white.cgColor
+        clipsToBounds = true
     }
 }

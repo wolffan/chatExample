@@ -47,8 +47,8 @@ class Router {
         return login
     }
     
-    class func createChatController(username: String, repository: chatRepository) -> ChatController {
-        let chatController = ChatController(username: username, repository: repository)
+    class func createChatController(username: String, repository: chatRepository) -> TokenController {
+        let chatController = TokenController(username: username, repository: repository)
         return chatController
     }
     

@@ -31,7 +31,7 @@ extension UIViewController : keyboardRegistration {
         notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
+    @objc func keyboardWillShow(notification: NSNotification) {
         if let controller = self as? keyboardAnimations {
             if let info = notification.userInfo {
                 let keyboardFrame : CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -41,7 +41,7 @@ extension UIViewController : keyboardRegistration {
         }
     }
     
-    func keyboardWillHide(notification: NSNotification) {
+    @objc func keyboardWillHide(notification: NSNotification) {
         if let controller = self as? keyboardAnimations {
             if let info = notification.userInfo {
                 let keyboardFrame : CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue

@@ -71,7 +71,7 @@ class ChatController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationItem.rightBarButtonItem = logoutButton
     }
     
-    func logoutPressed() {
+    @objc func logoutPressed() {
         self.deregisterKeyboard()
         self.userlogout()
     }

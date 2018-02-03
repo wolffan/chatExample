@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CD4D6AB21DBD1DA000643DBF"
-               BuildableName = "simpleChat.app"
-               BlueprintName = "simpleChat"
-               ReferencedContainer = "container:simpleChat.xcodeproj">
+               BuildableName = "ETHRadar.app"
+               BlueprintName = "ETHRadar"
+               ReferencedContainer = "container:ETHRadar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -33,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CD4D6AC61DBD1DA000643DBF"
-               BuildableName = "simpleChatTests.xctest"
-               BlueprintName = "simpleChatTests"
-               ReferencedContainer = "container:simpleChat.xcodeproj">
+               BuildableName = "ETHRadarTests.xctest"
+               BlueprintName = "ETHRadarTests"
+               ReferencedContainer = "container:ETHRadar.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CD4D6AD11DBD1DA000643DBF"
-               BuildableName = "simpleChatUITests.xctest"
-               BlueprintName = "simpleChatUITests"
-               ReferencedContainer = "container:simpleChat.xcodeproj">
+               BuildableName = "ETHRadarUITests.xctest"
+               BlueprintName = "ETHRadarUITests"
+               ReferencedContainer = "container:ETHRadar.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +54,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD4D6AB21DBD1DA000643DBF"
-            BuildableName = "simpleChat.app"
-            BlueprintName = "simpleChat"
-            ReferencedContainer = "container:simpleChat.xcodeproj">
+            BuildableName = "ETHRadar.app"
+            BlueprintName = "ETHRadar"
+            ReferencedContainer = "container:ETHRadar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,6 +66,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -76,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD4D6AB21DBD1DA000643DBF"
-            BuildableName = "simpleChat.app"
-            BlueprintName = "simpleChat"
-            ReferencedContainer = "container:simpleChat.xcodeproj">
+            BuildableName = "ETHRadar.app"
+            BlueprintName = "ETHRadar"
+            ReferencedContainer = "container:ETHRadar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -102,9 +104,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CD4D6AB21DBD1DA000643DBF"
-            BuildableName = "simpleChat.app"
-            BlueprintName = "simpleChat"
-            ReferencedContainer = "container:simpleChat.xcodeproj">
+            BuildableName = "ETHRadar.app"
+            BlueprintName = "ETHRadar"
+            ReferencedContainer = "container:ETHRadar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

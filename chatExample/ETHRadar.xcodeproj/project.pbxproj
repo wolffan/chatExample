@@ -54,12 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CD4D6AB31DBD1DA000643DBF /* simpleChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETHRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6AC01DBD1DA000643DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4D6AC21DBD1DA000643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD4D6AC71DBD1DA000643DBF /* simpleChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4D6AC71DBD1DA000643DBF /* ETHRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6ACD1DBD1DA000643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD4D6AD21DBD1DA000643DBF /* simpleChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = simpleChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4D6AD21DBD1DA000643DBF /* ETHRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6AD61DBD1DA000643DBF /* simpleChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleChatUITests.swift; sourceTree = "<group>"; };
 		CD4D6AD81DBD1DA100643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,9 +117,9 @@
 		CD4D6AAA1DBD1DA000643DBF = {
 			isa = PBXGroup;
 			children = (
-				CD4D6AB51DBD1DA000643DBF /* simpleChat */,
-				CD4D6ACA1DBD1DA000643DBF /* simpleChatTests */,
-				CD4D6AD51DBD1DA000643DBF /* simpleChatUITests */,
+				CD4D6AB51DBD1DA000643DBF /* ETHRadar */,
+				CD4D6ACA1DBD1DA000643DBF /* ETHRadarTests */,
+				CD4D6AD51DBD1DA000643DBF /* ETHRadarUITests */,
 				CD4D6AB41DBD1DA000643DBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,14 +127,14 @@
 		CD4D6AB41DBD1DA000643DBF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD4D6AB31DBD1DA000643DBF /* simpleChat.app */,
-				CD4D6AC71DBD1DA000643DBF /* simpleChatTests.xctest */,
-				CD4D6AD21DBD1DA000643DBF /* simpleChatUITests.xctest */,
+				CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */,
+				CD4D6AC71DBD1DA000643DBF /* ETHRadarTests.xctest */,
+				CD4D6AD21DBD1DA000643DBF /* ETHRadarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CD4D6AB51DBD1DA000643DBF /* simpleChat */ = {
+		CD4D6AB51DBD1DA000643DBF /* ETHRadar */ = {
 			isa = PBXGroup;
 			children = (
 				CD88EF9F1DCA47C00023FD5F /* Assets.xcassets */,
@@ -149,10 +149,10 @@
 				CDAD44C51DC11B4B0052BCC9 /* Controllers */,
 				CDAD44C41DC11B3F0052BCC9 /* Models */,
 			);
-			path = simpleChat;
+			path = ETHRadar;
 			sourceTree = "<group>";
 		};
-		CD4D6ACA1DBD1DA000643DBF /* simpleChatTests */ = {
+		CD4D6ACA1DBD1DA000643DBF /* ETHRadarTests */ = {
 			isa = PBXGroup;
 			children = (
 				CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */,
@@ -162,16 +162,16 @@
 				CD88EFA31DCA628A0023FD5F /* ChatViewModelTests.swift */,
 				CD4D6ACD1DBD1DA000643DBF /* Info.plist */,
 			);
-			path = simpleChatTests;
+			path = ETHRadarTests;
 			sourceTree = "<group>";
 		};
-		CD4D6AD51DBD1DA000643DBF /* simpleChatUITests */ = {
+		CD4D6AD51DBD1DA000643DBF /* ETHRadarUITests */ = {
 			isa = PBXGroup;
 			children = (
 				CD4D6AD61DBD1DA000643DBF /* simpleChatUITests.swift */,
 				CD4D6AD81DBD1DA100643DBF /* Info.plist */,
 			);
-			path = simpleChatUITests;
+			path = ETHRadarUITests;
 			sourceTree = "<group>";
 		};
 		CD88EF941DC729CB0023FD5F /* Views */ = {
@@ -220,9 +220,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD4D6AB21DBD1DA000643DBF /* simpleChat */ = {
+		CD4D6AB21DBD1DA000643DBF /* ETHRadar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD4D6ADB1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "simpleChat" */;
+			buildConfigurationList = CD4D6ADB1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadar" */;
 			buildPhases = (
 				CD4D6AAF1DBD1DA000643DBF /* Sources */,
 				CD4D6AB01DBD1DA000643DBF /* Frameworks */,
@@ -232,14 +232,14 @@
 			);
 			dependencies = (
 			);
-			name = simpleChat;
+			name = ETHRadar;
 			productName = simpleChat;
-			productReference = CD4D6AB31DBD1DA000643DBF /* simpleChat.app */;
+			productReference = CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CD4D6AC61DBD1DA000643DBF /* simpleChatTests */ = {
+		CD4D6AC61DBD1DA000643DBF /* ETHRadarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD4D6ADE1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "simpleChatTests" */;
+			buildConfigurationList = CD4D6ADE1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadarTests" */;
 			buildPhases = (
 				CD4D6AC31DBD1DA000643DBF /* Sources */,
 				CD4D6AC41DBD1DA000643DBF /* Frameworks */,
@@ -250,14 +250,14 @@
 			dependencies = (
 				CD4D6AC91DBD1DA000643DBF /* PBXTargetDependency */,
 			);
-			name = simpleChatTests;
+			name = ETHRadarTests;
 			productName = simpleChatTests;
-			productReference = CD4D6AC71DBD1DA000643DBF /* simpleChatTests.xctest */;
+			productReference = CD4D6AC71DBD1DA000643DBF /* ETHRadarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CD4D6AD11DBD1DA000643DBF /* simpleChatUITests */ = {
+		CD4D6AD11DBD1DA000643DBF /* ETHRadarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD4D6AE11DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "simpleChatUITests" */;
+			buildConfigurationList = CD4D6AE11DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadarUITests" */;
 			buildPhases = (
 				CD4D6ACE1DBD1DA000643DBF /* Sources */,
 				CD4D6ACF1DBD1DA000643DBF /* Frameworks */,
@@ -268,9 +268,9 @@
 			dependencies = (
 				CD4D6AD41DBD1DA000643DBF /* PBXTargetDependency */,
 			);
-			name = simpleChatUITests;
+			name = ETHRadarUITests;
 			productName = simpleChatUITests;
-			productReference = CD4D6AD21DBD1DA000643DBF /* simpleChatUITests.xctest */;
+			productReference = CD4D6AD21DBD1DA000643DBF /* ETHRadarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -280,30 +280,32 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Raimon Lapuente";
 				TargetAttributes = {
 					CD4D6AB21DBD1DA000643DBF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9SDMDTJ5TT;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					CD4D6AC61DBD1DA000643DBF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9SDMDTJ5TT;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CD4D6AB21DBD1DA000643DBF;
 					};
 					CD4D6AD11DBD1DA000643DBF = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 9SDMDTJ5TT;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CD4D6AB21DBD1DA000643DBF;
 					};
 				};
 			};
-			buildConfigurationList = CD4D6AAE1DBD1DA000643DBF /* Build configuration list for PBXProject "simpleChat" */;
+			buildConfigurationList = CD4D6AAE1DBD1DA000643DBF /* Build configuration list for PBXProject "ETHRadar" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -316,9 +318,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD4D6AB21DBD1DA000643DBF /* simpleChat */,
-				CD4D6AC61DBD1DA000643DBF /* simpleChatTests */,
-				CD4D6AD11DBD1DA000643DBF /* simpleChatUITests */,
+				CD4D6AB21DBD1DA000643DBF /* ETHRadar */,
+				CD4D6AC61DBD1DA000643DBF /* ETHRadarTests */,
+				CD4D6AD11DBD1DA000643DBF /* ETHRadarUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -401,12 +403,12 @@
 /* Begin PBXTargetDependency section */
 		CD4D6AC91DBD1DA000643DBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD4D6AB21DBD1DA000643DBF /* simpleChat */;
+			target = CD4D6AB21DBD1DA000643DBF /* ETHRadar */;
 			targetProxy = CD4D6AC81DBD1DA000643DBF /* PBXContainerItemProxy */;
 		};
 		CD4D6AD41DBD1DA000643DBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CD4D6AB21DBD1DA000643DBF /* simpleChat */;
+			target = CD4D6AB21DBD1DA000643DBF /* ETHRadar */;
 			targetProxy = CD4D6AD31DBD1DA000643DBF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -432,7 +434,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -440,7 +444,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -481,7 +490,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -489,7 +500,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -524,7 +540,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -537,7 +554,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -551,8 +569,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simpleChat.app/simpleChat";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ETHRadar.app/ETHRadar";
 			};
 			name = Debug;
 		};
@@ -566,8 +585,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/simpleChat.app/simpleChat";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ETHRadar.app/ETHRadar";
 			};
 			name = Release;
 		};
@@ -580,7 +600,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = simpleChat;
 			};
 			name = Debug;
@@ -594,7 +615,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = simpleChat;
 			};
 			name = Release;
@@ -602,7 +624,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD4D6AAE1DBD1DA000643DBF /* Build configuration list for PBXProject "simpleChat" */ = {
+		CD4D6AAE1DBD1DA000643DBF /* Build configuration list for PBXProject "ETHRadar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD4D6AD91DBD1DA100643DBF /* Debug */,
@@ -611,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD4D6ADB1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "simpleChat" */ = {
+		CD4D6ADB1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD4D6ADC1DBD1DA100643DBF /* Debug */,
@@ -620,7 +642,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD4D6ADE1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "simpleChatTests" */ = {
+		CD4D6ADE1DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD4D6ADF1DBD1DA100643DBF /* Debug */,
@@ -629,7 +651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD4D6AE11DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "simpleChatUITests" */ = {
+		CD4D6AE11DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CD4D6AE21DBD1DA100643DBF /* Debug */,

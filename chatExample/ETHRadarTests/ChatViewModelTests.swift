@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import simpleChat
+@testable import ETHRadar
 
 class ChatViewModelTests: XCTestCase {
     

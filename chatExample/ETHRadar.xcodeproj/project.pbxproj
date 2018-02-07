@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D83D9DB202AE81C0075EAAE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D83D9DA202AE81B0075EAAE /* ViewController.xib */; };
 		2DB3676D2025D64000427E3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3676C2025D64000427E3F /* Localizable.strings */; };
 		CD4D6AC11DBD1DA000643DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6ABF1DBD1DA000643DBF /* LaunchScreen.storyboard */; };
-		CD4D6AD71DBD1DA000643DBF /* simpleChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AD61DBD1DA000643DBF /* simpleChatUITests.swift */; };
 		CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */; };
 		CD4D6AEB1DBD1E0500643DBF /* keyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE51DBD1E0500643DBF /* keyboardExtension.swift */; };
 		CD4D6AEC1DBD1E0500643DBF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE61DBD1E0500643DBF /* Router.swift */; };
 		CD4D6AED1DBD1E0500643DBF /* userRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE71DBD1E0500643DBF /* userRepository.swift */; };
 		CD4D6AEE1DBD1E0500643DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE81DBD1E0500643DBF /* ViewController.swift */; };
-		CD4D6AEF1DBD1E0500643DBF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6AE91DBD1E0500643DBF /* ViewController.xib */; };
 		CD4D6AF11DBD228D00643DBF /* userRepositoryIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */; };
 		CD88EF961DC729E90023FD5F /* MeChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */; };
 		CD88EF981DC729F70023FD5F /* MeChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */; };
@@ -45,31 +44,21 @@
 			remoteGlobalIDString = CD4D6AB21DBD1DA000643DBF;
 			remoteInfo = simpleChat;
 		};
-		CD4D6AD31DBD1DA000643DBF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CD4D6AAB1DBD1DA000643DBF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CD4D6AB21DBD1DA000643DBF;
-			remoteInfo = simpleChat;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D83D9DA202AE81B0075EAAE /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		2DB3676C2025D64000427E3F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 		CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETHRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6AC01DBD1DA000643DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4D6AC21DBD1DA000643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4D6AC71DBD1DA000643DBF /* ETHRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6ACD1DBD1DA000643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD4D6AD21DBD1DA000643DBF /* ETHRadarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHRadarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD4D6AD61DBD1DA000643DBF /* simpleChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simpleChatUITests.swift; sourceTree = "<group>"; };
-		CD4D6AD81DBD1DA100643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4D6AE51DBD1E0500643DBF /* keyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keyboardExtension.swift; sourceTree = "<group>"; };
 		CD4D6AE61DBD1E0500643DBF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CD4D6AE71DBD1E0500643DBF /* userRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepository.swift; sourceTree = "<group>"; };
 		CD4D6AE81DBD1E0500643DBF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD4D6AE91DBD1E0500643DBF /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepositoryIntegrationTests.swift; sourceTree = "<group>"; };
 		CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeChatTableViewCell.swift; sourceTree = "<group>"; };
 		CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeChatTableViewCell.xib; sourceTree = "<group>"; };
@@ -106,13 +95,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD4D6ACF1DBD1DA000643DBF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,7 +103,6 @@
 			children = (
 				CD4D6AB51DBD1DA000643DBF /* ETHRadar */,
 				CD4D6ACA1DBD1DA000643DBF /* ETHRadarTests */,
-				CD4D6AD51DBD1DA000643DBF /* ETHRadarUITests */,
 				CD4D6AB41DBD1DA000643DBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,7 +112,6 @@
 			children = (
 				CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */,
 				CD4D6AC71DBD1DA000643DBF /* ETHRadarTests.xctest */,
-				CD4D6AD21DBD1DA000643DBF /* ETHRadarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,15 +148,6 @@
 			path = ETHRadarTests;
 			sourceTree = "<group>";
 		};
-		CD4D6AD51DBD1DA000643DBF /* ETHRadarUITests */ = {
-			isa = PBXGroup;
-			children = (
-				CD4D6AD61DBD1DA000643DBF /* simpleChatUITests.swift */,
-				CD4D6AD81DBD1DA100643DBF /* Info.plist */,
-			);
-			path = ETHRadarUITests;
-			sourceTree = "<group>";
-		};
 		CD88EF941DC729CB0023FD5F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4D6AE81DBD1E0500643DBF /* ViewController.swift */,
-				CD4D6AE91DBD1E0500643DBF /* ViewController.xib */,
+				2D83D9DA202AE81B0075EAAE /* ViewController.xib */,
 				CDAD44BA1DBD35FA0052BCC9 /* TokenController.swift */,
 				CDAD44BC1DBD37FC0052BCC9 /* TokenController.xib */,
 			);
@@ -258,24 +229,6 @@
 			productReference = CD4D6AC71DBD1DA000643DBF /* ETHRadarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CD4D6AD11DBD1DA000643DBF /* ETHRadarUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CD4D6AE11DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadarUITests" */;
-			buildPhases = (
-				CD4D6ACE1DBD1DA000643DBF /* Sources */,
-				CD4D6ACF1DBD1DA000643DBF /* Frameworks */,
-				CD4D6AD01DBD1DA000643DBF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CD4D6AD41DBD1DA000643DBF /* PBXTargetDependency */,
-			);
-			name = ETHRadarUITests;
-			productName = simpleChatUITests;
-			productReference = CD4D6AD21DBD1DA000643DBF /* ETHRadarUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -299,13 +252,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = CD4D6AB21DBD1DA000643DBF;
 					};
-					CD4D6AD11DBD1DA000643DBF = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 9SDMDTJ5TT;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-						TestTargetID = CD4D6AB21DBD1DA000643DBF;
-					};
 				};
 			};
 			buildConfigurationList = CD4D6AAE1DBD1DA000643DBF /* Build configuration list for PBXProject "ETHRadar" */;
@@ -323,7 +269,6 @@
 			targets = (
 				CD4D6AB21DBD1DA000643DBF /* ETHRadar */,
 				CD4D6AC61DBD1DA000643DBF /* ETHRadarTests */,
-				CD4D6AD11DBD1DA000643DBF /* ETHRadarUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,9 +278,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D83D9DB202AE81C0075EAAE /* ViewController.xib in Resources */,
 				CD955F2B1DC15E740032EE3D /* ChatTableViewCell.xib in Resources */,
 				CD4D6AC11DBD1DA000643DBF /* LaunchScreen.storyboard in Resources */,
-				CD4D6AEF1DBD1E0500643DBF /* ViewController.xib in Resources */,
 				2DB3676D2025D64000427E3F /* Localizable.strings in Resources */,
 				CDAD44BD1DBD37FC0052BCC9 /* TokenController.xib in Resources */,
 				CD88EFA01DCA47C00023FD5F /* Assets.xcassets in Resources */,
@@ -344,13 +289,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CD4D6AC51DBD1DA000643DBF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CD4D6AD01DBD1DA000643DBF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,14 +332,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD4D6ACE1DBD1DA000643DBF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD4D6AD71DBD1DA000643DBF /* simpleChatUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -409,11 +339,6 @@
 			isa = PBXTargetDependency;
 			target = CD4D6AB21DBD1DA000643DBF /* ETHRadar */;
 			targetProxy = CD4D6AC81DBD1DA000643DBF /* PBXContainerItemProxy */;
-		};
-		CD4D6AD41DBD1DA000643DBF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CD4D6AB21DBD1DA000643DBF /* ETHRadar */;
-			targetProxy = CD4D6AD31DBD1DA000643DBF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -569,7 +494,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9SDMDTJ5TT;
-				INFOPLIST_FILE = simpleChatTests/Info.plist;
+				INFOPLIST_FILE = ETHRadarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -585,43 +510,13 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 9SDMDTJ5TT;
-				INFOPLIST_FILE = simpleChatTests/Info.plist;
+				INFOPLIST_FILE = ETHRadarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ETHRadar.app/ETHRadar";
-			};
-			name = Release;
-		};
-		CD4D6AE21DBD1DA100643DBF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9SDMDTJ5TT;
-				INFOPLIST_FILE = simpleChatUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = simpleChat;
-			};
-			name = Debug;
-		};
-		CD4D6AE31DBD1DA100643DBF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = 9SDMDTJ5TT;
-				INFOPLIST_FILE = simpleChatUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChatUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = simpleChat;
 			};
 			name = Release;
 		};
@@ -651,15 +546,6 @@
 			buildConfigurations = (
 				CD4D6ADF1DBD1DA100643DBF /* Debug */,
 				CD4D6AE01DBD1DA100643DBF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CD4D6AE11DBD1DA100643DBF /* Build configuration list for PBXNativeTarget "ETHRadarUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CD4D6AE21DBD1DA100643DBF /* Debug */,
-				CD4D6AE31DBD1DA100643DBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

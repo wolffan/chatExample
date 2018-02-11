@@ -10,15 +10,15 @@ import Foundation
 import UIKit
 
 protocol transferUser {
-    func finisWithUsername(username: String)
+    func showTokens()
 }
 
 extension ViewController: transferUser {
     
-    func finisWithUsername(username: String) {
+    func showTokens() {
         let app = UIApplication.shared.delegate as! AppDelegate
         if let router = app.router {
-            router.loginFinishedWithUser(username: username, animated: true)
+            router.openTokens(animated: true)
         }
     }
 }

@@ -18,7 +18,6 @@ class Router {
     let window : UIWindow
     let userRepo : userStorage
     let dataRepo : DataRepository
-    let userCheck : UserCheck
     
     init?(window: UIWindow?) {
         guard let validWindow = window else {
@@ -26,15 +25,11 @@ class Router {
         }
         self.userRepo = userRepository()
         self.dataRepo = DataRepository()
-        self.dataRepo.fetch()
-        self.userCheck = UserCheck.init(userList: self.dataRepo)
+        self.dataRepo.fetchAll()
 
         self.window = validWindow
         let (hasSession, username) = Router.hasStoredSession(userRepo: self.userRepo)
-        self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo, userCheck: self.userCheck))
-        if hasSession {
-            self.loginFinishedWithUser(username: username!, animated: false)
-        }
+        self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo))
     }
     
     func setUp() {
@@ -42,13 +37,13 @@ class Router {
         self.window.makeKeyAndVisible()
     }
     
-    class func createLogin(userRepo : userStorage, userCheck: UserCheck) -> ViewController {
-        let login = ViewController(userVaildator:userCheck)
+    class func createLogin(userRepo : userStorage) -> ViewController {
+        let login = ViewController.init()
         return login
     }
     
-    class func createChatController(username: String, repository: chatRepository) -> TokenController {
-        let chatController = TokenController(username: username, repository: repository)
+    class func createChatController(repository: ETHRepository) -> TokenController {
+        let chatController = TokenController(repository: repository)
         return chatController
     }
     
@@ -63,9 +58,8 @@ class Router {
     
     // -- Navigation Methods --
     
-    func loginFinishedWithUser(username: String, animated: Bool) {
-        self.userRepo.saveUser(username: username)
-        let chatController = Router.createChatController(username: username, repository: self.dataRepo)
+    func openTokens(animated: Bool) {
+        let chatController = Router.createChatController(repository: self.dataRepo)
         self.navigation.pushViewController(chatController, animated: animated)
     }
     

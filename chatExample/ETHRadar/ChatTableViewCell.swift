@@ -34,8 +34,5 @@ class ChatTableViewCell: conversationCell {
     override func configWith(viewModel:ChatViewModel) {
         conversationText.text = viewModel.conversation
         time.text = viewModel.time
-        if let image = viewModel.logo {
-            userImage.downloadFrom(link: image)
-        }
     }
 }

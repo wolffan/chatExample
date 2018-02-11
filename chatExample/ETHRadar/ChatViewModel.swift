@@ -29,3 +29,11 @@ class ChatViewModel {
         self.logo = chat.userImageURL
     }
 }
+
+struct TokenViewModel {
+    let displayBalance: String
+    let displayName: String
+    let amount: Double
+    
+    
+}

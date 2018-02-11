@@ -12,15 +12,11 @@ import UIKit
 
 class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate {
 
-    let userCheck: UserCheck
-
     @IBOutlet weak var ETHLabel: UILabel!
     @IBOutlet weak var TokenLabel: UILabel!
     @IBOutlet weak var viewTokensButton: UIButton!
-    @IBOutlet weak var addETHButton: UIButton!
     
-    init(userVaildator: UserCheck) {
-        self.userCheck = userVaildator
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -30,16 +26,22 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.registerForKeyboard()
-
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        self.registerForKeyboard()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.deregisterKeyboard()
     }
     
     @IBAction func addETHButtonTapped(_ sender: Any) {
     }
     
     @IBAction func viewMoreTapped(_ sender: Any) {
+        self.showTokens()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -48,11 +50,11 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
 
     func animateKeyboardChange(height: Float) {
 //        if self.bottomDistance.constant < 0 && height > 0 { return }
-//
+
 //        self.bottomDistance.constant -= CGFloat(height)
-//        UIView.animate(withDuration: 0.2, animations: {
-//            self.view.layoutIfNeeded()
-//        })
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.layoutIfNeeded()
+        })
     }
 }
 

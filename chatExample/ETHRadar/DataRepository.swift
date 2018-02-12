@@ -99,36 +99,6 @@ class DataRepository: ETHRepository {
     static let address = "0x082d3e0f04664b65127876e9A05e2183451c792a"
     static let EtherscanAPIKey = "E5QFXD7ZYRH7THQM5PIXB8JD4GY38SEJZ4"
     
-//    func getGolemData() {
-//        let url = coins.GNT.tokenURL()
-//        fetch(url: url) { (result) in
-//            guard let numberOfTokens = result["result"] as? Double else {
-//                return
-//            }
-//            let golem = try? Token.init(amount: numberOfTokens, name: coins.GNT.fullName(), rate: 2)
-//        }
-//    }
-//
-//    func getAugurData() {
-//        let url = coins.REP.tokenURL()
-//        fetch(url: url) { (result) in
-//            guard let numberOfTokens = result["result"] as? Double else {
-//                return
-//            }
-//            let augur = try? Token.init(amount: numberOfTokens, name: coins.REP.fullName(), rate: 2)
-//        }
-//    }
-//
-//    func getOmniseData() {
-//        let url = coins.OMG.tokenURL()
-//        fetch(url: url) { (result) in
-//            guard let numberOfTokens = result["result"] as? Double else {
-//                return
-//            }
-//            let omnise = try? Token.init(amount: numberOfTokens, name: coins.OMG.fullName(), rate: 2)
-//        }
-//    }
-    
     func allCoins() -> [String] {
         return [coins.GNT.rawValue, coins.REP.rawValue, coins.OMG.rawValue, coins.ETH.rawValue]
     }
@@ -146,7 +116,7 @@ class DataRepository: ETHRepository {
             case .ETH: return "Ethereum"
             }
         }
-            
+        
         func address() -> String {
             switch self {
             case .GNT: return "0xa74476443119A942dE498590Fe1f2454d7D4aC0d"

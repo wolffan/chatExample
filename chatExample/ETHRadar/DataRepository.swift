@@ -28,6 +28,7 @@ class DataRepository: ETHRepository {
     
     var tokens: Array = [Token]()
     var balance: Double = 0
+    let storage: TokenStorage = TokenStorage(tokens: [Token]())
     
     // TODO - reque a request
     fileprivate func fetch(url: String, parser: @escaping (_ result:[String:Any]) -> Void){
@@ -77,7 +78,7 @@ class DataRepository: ETHRepository {
             guard let numberOfTokens = result["result"] as? Double else {
                 return
             }
-            let token = try? Token.init(amount: numberOfTokens.cryptoBalueToDecimals(), name: coin.fullName(), rate: 2)
+            let token = try? Token.init(amount: numberOfTokens.cryptoBalueToDecimals(), name: coin.fullName(), ethValue: 2)
         }
         //updateCoin in repo
     }
@@ -159,6 +160,6 @@ class DataRepository: ETHRepository {
     }
     
     func getToken(position: NSInteger) -> Token {
-        return try! Token.init(amount: 2, name: "", rate: 2)
+        return try! Token.init(amount: 2, name: "", ethValue: 2)
     }
 }

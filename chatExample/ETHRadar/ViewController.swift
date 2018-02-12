@@ -36,10 +36,7 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
         super.viewWillDisappear(animated)
         self.deregisterKeyboard()
     }
-    
-    @IBAction func addETHButtonTapped(_ sender: Any) {
-    }
-    
+        
     @IBAction func viewMoreTapped(_ sender: Any) {
         self.showTokens()
     }

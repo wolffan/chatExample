@@ -13,10 +13,8 @@ protocol ETHRepository {
     func getETHBalance() -> Double
     func getToken(position: NSInteger) -> Token
     func allTokens() -> NSInteger
-}
-
-protocol userValidator {
-    func totalChattedUsers() -> [String]
+    
+    func fetchAll()
 }
 
 // Show us your ability to interact with external apis. You’ll have to deal with multiple calls
@@ -26,9 +24,16 @@ protocol userValidator {
 
 class DataRepository: ETHRepository {
     
+    static let address = "0x082d3e0f04664b65127876e9A05e2183451c792a"
+    static let EtherscanAPIKey = "E5QFXD7ZYRH7THQM5PIXB8JD4GY38SEJZ4"
+    
     var tokens: Array = [Token]()
     var balance: Double = 0
-    let storage: TokenStorage = TokenStorage(tokens: [Token]())
+    let storage: TokenStorage
+    
+    init(storage: TokenStorage) {
+        self.storage = storage
+    }
     
     // TODO - reque a request
     fileprivate func fetch(url: String, parser: @escaping (_ result:[String:Any]) -> Void){
@@ -78,9 +83,9 @@ class DataRepository: ETHRepository {
             guard let numberOfTokens = result["result"] as? Double else {
                 return
             }
-            let token = try? Token.init(amount: numberOfTokens.cryptoBalueToDecimals(), name: coin.fullName(), ethValue: 2)
+            self.storage.update(token: coin.rawValue, value: numberOfTokens.cryptoBalueToDecimals())
+            self.getRate(coin: coin)
         }
-        //updateCoin in repo
     }
     
     func getRate(coin: coins) {
@@ -89,20 +94,41 @@ class DataRepository: ETHRepository {
             guard let rate = result["rate"] as? Double else {
                 return
             }
-            self.updateTokenWithRate(rate: rate, coin: coin)
+            self.storage.update(token: coin.rawValue, value: rate)
         }
     }
-    
-    func updateTokenWithRate(rate: Double, coin: coins) {
-        //todo
-    }
-    
-    static let address = "0x082d3e0f04664b65127876e9A05e2183451c792a"
-    static let EtherscanAPIKey = "E5QFXD7ZYRH7THQM5PIXB8JD4GY38SEJZ4"
     
     func allCoins() -> [String] {
         return [coins.GNT.rawValue, coins.REP.rawValue, coins.OMG.rawValue, coins.ETH.rawValue]
     }
+    func allTokens() -> [String] {
+        return [coins.GNT.rawValue, coins.REP.rawValue, coins.OMG.rawValue]
+    }
+    
+    //repository
+    
+    func getAllTokens() -> [Token] {
+        return self.storage.tokens.filter({$0.key != coins.ETH.rawValue}).map({$0.value})
+    }
+    
+    func allTokens() -> NSInteger {
+        return self.storage.tokens.count
+    }
+    
+    func getETHBalance() -> Double {
+        if let eth = self.storage.tokens[coins.ETH.rawValue] {
+            return eth.amount
+        } else {
+            return 0
+        }
+    }
+    
+    func getToken(position: NSInteger) -> Token {
+        return getAllTokens()[position]
+    }
+    
+    // coins info
+    
     enum coins: String {
         case GNT
         case REP
@@ -143,23 +169,5 @@ class DataRepository: ETHRepository {
                 return "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=\(self.address)&address=\(DataRepository.address)&tag=latest&apikey=\(DataRepository.EtherscanAPIKey)"
             }
         }
-    }
-    
-    //repository
-    
-    func getAllTokens() -> [Token] {
-        return []
-    }
-    
-    func allTokens() -> NSInteger {
-        return 1
-    }
-    
-    func getETHBalance() -> Double {
-        return balance
-    }
-    
-    func getToken(position: NSInteger) -> Token {
-        return try! Token.init(amount: 2, name: "", ethValue: 2)
     }
 }

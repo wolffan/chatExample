@@ -13,7 +13,7 @@ class TokenStorage: NSObject, NSCoding {
     private static let encoderKey = "tokenStorage"
     
     required init?(coder aDecoder: NSCoder) {
-        if let decodedTokens = aDecoder.decodeObject(forKey: TokenStorage.encoderKey) as? [Token] {
+        if let decodedTokens = aDecoder.decodeObject(forKey: TokenStorage.encoderKey) as? [String:Token] {
             self.internalTokens = decodedTokens
         }
     }
@@ -22,19 +22,31 @@ class TokenStorage: NSObject, NSCoding {
         aCoder.encode(self.internalTokens, forKey: TokenStorage.encoderKey)
     }
     
-    private var internalTokens = [Token]()
+    private var internalTokens = [String:Token]()
     
-    init(tokens:[Token]) {
-        self.internalTokens = tokens
+    init(tokens:[String:Token]?) {
+        if let safeTokens = tokens {
+            self.internalTokens = safeTokens
+        } else {
+            self.internalTokens = [String:Token]()
+        }
     }
     
-    var tokens: [Token] {
+    var tokens: [String:Token] {
         get {
             return internalTokens
         }
         set {
             internalTokens = tokens
         }
+    }
+    
+    func update(token: String, value: Double) {
+        
+    }
+    
+    func updateRate(token: String, rate: Double) {
+        
     }
     
 }
@@ -45,8 +57,8 @@ extension TokenStorage {
         print(result)
     }
     
-    class func loadData() -> [Token]?  {
-        if let loadedData = NSKeyedUnarchiver.unarchiveObject(withFile: StorageHelper.getFilePath()) as? [Token] {
+    class func loadData() -> [String:Token]?  {
+        if let loadedData = NSKeyedUnarchiver.unarchiveObject(withFile: StorageHelper.getFilePath()) as? [String:Token] {
             return loadedData
         }
         return nil
@@ -57,9 +69,7 @@ class StorageHelper {
     static func getFilePath() -> String {
         let file = FileManager()
         let url = file.urls(for: .documentDirectory, in: .userDomainMask).first!
-        print(url)
         let path =  url.appendingPathComponent("tokens").path
-        print(path)
         return path
     }
 }

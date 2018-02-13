@@ -16,20 +16,18 @@ enum InitError : Error {
 class Router {
     let navigation : UINavigationController
     let window : UIWindow
-    let userRepo : userStorage
-    let dataRepo : DataRepository
+    let dataRepo : ETHRepository
     
     init?(window: UIWindow?) {
         guard let validWindow = window else {
             return nil
         }
-        self.userRepo = userRepository()
-        self.dataRepo = DataRepository()
+        let storage = TokenStorage.init(tokens:TokenStorage.loadData())
+        self.dataRepo = DataRepository.init(storage: storage)
         self.dataRepo.fetchAll()
 
         self.window = validWindow
-        let (hasSession, username) = Router.hasStoredSession(userRepo: self.userRepo)
-        self.navigation = UINavigationController.init(rootViewController: Router.createLogin(userRepo: self.userRepo))
+        self.navigation = UINavigationController.init(rootViewController: Router.createMain(dataRepo: self.dataRepo))
     }
     
     func setUp() {
@@ -37,12 +35,12 @@ class Router {
         self.window.makeKeyAndVisible()
     }
     
-    class func createLogin(userRepo : userStorage) -> ViewController {
+    class func createMain(dataRepo : ETHRepository) -> ViewController {
         let login = ViewController.init()
         return login
     }
     
-    class func createChatController(repository: ETHRepository) -> TokenController {
+    class func createTokenController(repository: ETHRepository) -> TokenController {
         let chatController = TokenController(repository: repository)
         return chatController
     }
@@ -59,12 +57,11 @@ class Router {
     // -- Navigation Methods --
     
     func openTokens(animated: Bool) {
-        let chatController = Router.createChatController(repository: self.dataRepo)
+        let chatController = Router.createTokenController(repository: self.dataRepo)
         self.navigation.pushViewController(chatController, animated: animated)
     }
     
     func logout() {
-        self.userRepo.removeUser()
         self.navigation.isNavigationBarHidden = true
         self.navigation.popViewController(animated: true)
     }

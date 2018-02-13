@@ -29,7 +29,7 @@ class IntegrationStorageTests: XCTestCase {
     func testStorageWhenNotEmpty() {
         //given
         let token = Token.init(amount: 2.52, name: "aToken", ethValue: 0.25)
-        let oneToken = TokenStorage.init(tokens: [token])
+        let oneToken = TokenStorage.init(tokens: [token.name:token])
         oneToken.saveData()
         
         //when
@@ -37,6 +37,19 @@ class IntegrationStorageTests: XCTestCase {
         
         //then
         XCTAssertEqual(readData?.count, 1)
+    }
+    
+    func testRetrivalKeepsDataStructure() {
+        //given
+        let token = Token.init(amount: 2.52, name: "aToken", ethValue: 0.25)
+        let oneToken = TokenStorage.init(tokens: [token.name:token])
+        oneToken.saveData()
+        
+        //when
+        let readData = TokenStorage.loadData()
+        
+        //then
+        XCTAssertNotNil(readData?["aToken"])
     }
 }
 

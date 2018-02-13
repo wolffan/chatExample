@@ -13,14 +13,13 @@
 		2DAD101C2030E3C700B553F2 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD101B2030E3C700B553F2 /* DoubleExtension.swift */; };
 		2DAD101E2031FDDC00B553F2 /* TokenStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD101D2031FDDC00B553F2 /* TokenStorage.swift */; };
 		2DAD10202032419B00B553F2 /* IntegrationStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD101F2032419B00B553F2 /* IntegrationStorageTests.swift */; };
+		2DAD1022203376CE00B553F2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD1021203376CE00B553F2 /* MainViewModel.swift */; };
 		2DB3676D2025D64000427E3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3676C2025D64000427E3F /* Localizable.strings */; };
 		CD4D6AC11DBD1DA000643DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6ABF1DBD1DA000643DBF /* LaunchScreen.storyboard */; };
 		CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */; };
 		CD4D6AEB1DBD1E0500643DBF /* keyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE51DBD1E0500643DBF /* keyboardExtension.swift */; };
 		CD4D6AEC1DBD1E0500643DBF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE61DBD1E0500643DBF /* Router.swift */; };
-		CD4D6AED1DBD1E0500643DBF /* userRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE71DBD1E0500643DBF /* userRepository.swift */; };
 		CD4D6AEE1DBD1E0500643DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE81DBD1E0500643DBF /* ViewController.swift */; };
-		CD4D6AF11DBD228D00643DBF /* userRepositoryIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */; };
 		CD88EF961DC729E90023FD5F /* MeChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */; };
 		CD88EF981DC729F70023FD5F /* MeChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */; };
 		CD88EF9A1DC9CE750023FD5F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF991DC9CE750023FD5F /* ChatViewModel.swift */; };
@@ -55,6 +54,7 @@
 		2DAD101B2030E3C700B553F2 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2DAD101D2031FDDC00B553F2 /* TokenStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStorage.swift; sourceTree = "<group>"; };
 		2DAD101F2032419B00B553F2 /* IntegrationStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationStorageTests.swift; sourceTree = "<group>"; };
+		2DAD1021203376CE00B553F2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2DB3676C2025D64000427E3F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 		CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETHRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6AC01DBD1DA000643DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,9 +64,7 @@
 		CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD4D6AE51DBD1E0500643DBF /* keyboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = keyboardExtension.swift; sourceTree = "<group>"; };
 		CD4D6AE61DBD1E0500643DBF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		CD4D6AE71DBD1E0500643DBF /* userRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepository.swift; sourceTree = "<group>"; };
 		CD4D6AE81DBD1E0500643DBF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userRepositoryIntegrationTests.swift; sourceTree = "<group>"; };
 		CD88EF951DC729E90023FD5F /* MeChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeChatTableViewCell.swift; sourceTree = "<group>"; };
 		CD88EF971DC729F70023FD5F /* MeChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MeChatTableViewCell.xib; sourceTree = "<group>"; };
 		CD88EF991DC9CE750023FD5F /* ChatViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 		CD4D6ACA1DBD1DA000643DBF /* ETHRadarTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD4D6AF01DBD228D00643DBF /* userRepositoryIntegrationTests.swift */,
 				CDCEC30C1DC2B0E9002B7549 /* DateHelpersTests.swift */,
 				CD88EF9B1DCA3BE20023FD5F /* ChatTests.swift */,
 				CD88EFA31DCA628A0023FD5F /* ChatViewModelTests.swift */,
@@ -171,6 +168,7 @@
 			children = (
 				CDAD44C71DC11B780052BCC9 /* Chat.swift */,
 				2DAD1017202B70D600B553F2 /* Token.swift */,
+				2DAD1021203376CE00B553F2 /* MainViewModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -189,7 +187,6 @@
 		CDAD44C61DC11B610052BCC9 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				CD4D6AE71DBD1E0500643DBF /* userRepository.swift */,
 				CDAD44C21DBFFEF70052BCC9 /* DataRepository.swift */,
 				CDCEC30A1DC1D7BE002B7549 /* DateHelper.swift */,
 				2DAD101D2031FDDC00B553F2 /* TokenStorage.swift */,
@@ -318,13 +315,13 @@
 				2DAD1018202B70D600B553F2 /* Token.swift in Sources */,
 				CD4D6AEC1DBD1E0500643DBF /* Router.swift in Sources */,
 				2DAD101C2030E3C700B553F2 /* DoubleExtension.swift in Sources */,
-				CD4D6AED1DBD1E0500643DBF /* userRepository.swift in Sources */,
 				CD88EF9A1DC9CE750023FD5F /* ChatViewModel.swift in Sources */,
 				CDAD44BB1DBD35FA0052BCC9 /* TokenController.swift in Sources */,
 				CDAD44C31DBFFEF70052BCC9 /* DataRepository.swift in Sources */,
 				CDCEC30B1DC1D7BE002B7549 /* DateHelper.swift in Sources */,
 				CD955F291DC15E600032EE3D /* ChatTableViewCell.swift in Sources */,
 				CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */,
+				2DAD1022203376CE00B553F2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +329,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD4D6AF11DBD228D00643DBF /* userRepositoryIntegrationTests.swift in Sources */,
 				CD88EF9C1DCA3BE20023FD5F /* ChatTests.swift in Sources */,
 				CD88EFA41DCA628A0023FD5F /* ChatViewModelTests.swift in Sources */,
 				2DAD10202032419B00B553F2 /* IntegrationStorageTests.swift in Sources */,

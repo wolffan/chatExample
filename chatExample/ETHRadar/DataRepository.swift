@@ -15,6 +15,7 @@ protocol ETHRepository {
     func allTokens() -> NSInteger
     
     func fetchAll()
+     var loading: Bool { get }
 }
 
 // Show us your ability to interact with external apis. You’ll have to deal with multiple calls
@@ -27,12 +28,12 @@ class DataRepository: ETHRepository {
     static let address = "0x082d3e0f04664b65127876e9A05e2183451c792a"
     static let EtherscanAPIKey = "E5QFXD7ZYRH7THQM5PIXB8JD4GY38SEJZ4"
     
-    var tokens: Array = [Token]()
-    var balance: Double = 0
     let storage: TokenStorage
+    var loading: Bool
     
     init(storage: TokenStorage) {
         self.storage = storage
+        self.loading = false
     }
     
     // TODO - reque a request
@@ -60,7 +61,7 @@ class DataRepository: ETHRepository {
                     }
                 }
             } catch {
-                print("Something went wrong...")
+                print("Something went wrong.. .2")
             }
         }
         
@@ -80,10 +81,11 @@ class DataRepository: ETHRepository {
     func updateCoin(coin: coins) {
         let url = coin.tokenURL()
         fetch(url: url) { (result) in
-            guard let numberOfTokens = result["result"] as? Double else {
+            guard let numberOfTokens = result["result"] as? String else {
+                print(result)
                 return
             }
-            self.storage.update(token: coin.rawValue, value: numberOfTokens.cryptoBalueToDecimals())
+            self.storage.update(token: coin.rawValue, value: Double(numberOfTokens)!.cryptoBalueToDecimals())
             self.getRate(coin: coin)
         }
     }
@@ -91,10 +93,11 @@ class DataRepository: ETHRepository {
     func getRate(coin: coins) {
         let url = coin.rateURL()
         fetch(url: url) { (result) in
-            guard let rate = result["rate"] as? Double else {
+            guard let rate = result["rate"] as? String, let doubleRate = Double(rate) else {
+                print(result)
                 return
             }
-            self.storage.update(token: coin.rawValue, value: rate)
+            self.storage.updateRate(token: coin.rawValue, rate: doubleRate)
         }
     }
     
@@ -112,7 +115,7 @@ class DataRepository: ETHRepository {
     }
     
     func allTokens() -> NSInteger {
-        return self.storage.tokens.count
+        return self.getAllTokens().count
     }
     
     func getETHBalance() -> Double {
@@ -164,9 +167,9 @@ class DataRepository: ETHRepository {
         func tokenURL() -> String {
             switch self {
             case .ETH:
-                return "https://api.etherscan.io/api?module=account&action=balance&address=\(self.address)&tag=latest&apikey=\(DataRepository.EtherscanAPIKey)"
+                return "https://api.etherscan.io/api?module=account&action=balance&address=\(self.address())&tag=latest&apikey=\(DataRepository.EtherscanAPIKey)"
             default:
-                return "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=\(self.address)&address=\(DataRepository.address)&tag=latest&apikey=\(DataRepository.EtherscanAPIKey)"
+                return "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=\(self.address())&address=\(DataRepository.address)&tag=latest&apikey=\(DataRepository.EtherscanAPIKey)"
             }
         }
     }

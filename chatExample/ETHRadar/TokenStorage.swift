@@ -42,11 +42,24 @@ class TokenStorage: NSObject, NSCoding {
     }
     
     func update(token: String, value: Double) {
-        
+        if let oldToken = internalTokens[token] {
+            let newToken = Token.init(amount: value, name: oldToken.name, ethValue: oldToken.rate)
+            self.internalTokens[token] = newToken
+        } else {
+            let newToken = Token.init(amount: value, name: token, ethValue: 0)
+            self.internalTokens[token] = newToken
+        }
+        saveData()
     }
     
     func updateRate(token: String, rate: Double) {
-        
+        if let oldToken = internalTokens[token] {
+            let newToken = Token.init(amount: oldToken.amount, name: oldToken.name, ethValue: rate)
+            self.internalTokens[token] = newToken
+        } else {
+            print("there should be a token")
+        }
+        saveData()
     }
     
 }
@@ -54,7 +67,6 @@ class TokenStorage: NSObject, NSCoding {
 extension TokenStorage {
     func saveData() {
         let result = NSKeyedArchiver.archiveRootObject(self.internalTokens, toFile: StorageHelper.getFilePath())
-        print(result)
     }
     
     class func loadData() -> [String:Token]?  {

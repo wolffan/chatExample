@@ -16,8 +16,18 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
     @IBOutlet weak var TokenLabel: UILabel!
     @IBOutlet weak var viewTokensButton: UIButton!
     
-    init() {
+    let viewModel: MainViewModel
+    
+    init(viewModel: MainViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        
+        self.viewModel.populateETH { (eth) in
+            self.ETHLabel.text = eth
+        }
+        self.viewModel.populateTokens { (tokenEth) in
+            self.TokenLabel.text = tokenEth
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -31,6 +41,8 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
         self.registerForKeyboard()
+        
+        self.viewModel.update()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -46,9 +58,6 @@ class ViewController: UIViewController, keyboardAnimations, UITextFieldDelegate 
     }
 
     func animateKeyboardChange(height: Float) {
-//        if self.bottomDistance.constant < 0 && height > 0 { return }
-
-//        self.bottomDistance.constant -= CGFloat(height)
         UIView.animate(withDuration: 0.2, animations: {
             self.view.layoutIfNeeded()
         })

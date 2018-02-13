@@ -14,6 +14,6 @@ extension Double {
         return decimal
     }
     func cryptoBalueToDecimals() -> Double {
-        return scientificToEightDecimals(decimals: 8)
+        return scientificToEightDecimals(decimals: 18)
     }
 }

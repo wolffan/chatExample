@@ -36,22 +36,14 @@ class Router {
     }
     
     class func createMain(dataRepo : ETHRepository) -> ViewController {
-        let login = ViewController.init()
+        let viewModel = MainViewModel.init(repository: dataRepo)
+        let login = ViewController.init(viewModel: viewModel)
         return login
     }
     
     class func createTokenController(repository: ETHRepository) -> TokenController {
         let chatController = TokenController(repository: repository)
         return chatController
-    }
-    
-    // -- Session methods --
-    
-    class func hasStoredSession(userRepo: userStorage) -> (Bool,String?) {
-        if let user = userRepo.getSavedUser() {
-            return (true, user)
-        }
-        return (false, nil)
     }
     
     // -- Navigation Methods --

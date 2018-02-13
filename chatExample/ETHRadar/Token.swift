@@ -18,24 +18,24 @@ class Token: NSObject, NSCoding {
     private static let encoderethValueKey = "ethValueStorage"
     
     required init?(coder aDecoder: NSCoder) {
-        if let name = aDecoder.decodeObject(forKey: Token.encodernameKey) as? String,
-            let amount = aDecoder.decodeObject(forKey: Token.encoderamountKey) as? Double,
-            let ethValue = aDecoder.decodeObject(forKey: Token.encoderethValueKey) as? Double {
-            self.name = name
-            self.amount = Double(amount)
-            self.ethValue = ethValue
-        } else {
+        guard let name = aDecoder.decodeObject(forKey: Token.encodernameKey) as? String  else {
+            print("something happened")
             return nil
         }
+        let amount = aDecoder.decodeDouble(forKey: Token.encoderamountKey)
+        let ethValue = aDecoder.decodeDouble(forKey: Token.encoderethValueKey)
+        self.name = name
+        self.amount = Double(amount)
+        self.ethValue = ethValue
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.name, forKey: Token.encodernameKey)
-        aCoder.encode(self.amount, forKey: Token.encoderamountKey)
-        aCoder.encode(self.ethValue, forKey: Token.encoderethValueKey)
+        aCoder.encode(name, forKey: Token.encodernameKey)
+        aCoder.encode(amount, forKey: Token.encoderamountKey)
+        aCoder.encode(ethValue, forKey: Token.encoderethValueKey)
     }
     
-    init(amount: Double, name: String, ethValue: Double) throws {
+    init(amount: Double, name: String, ethValue: Double) {
         self.name = name
         self.amount = Double(amount)
         self.ethValue = ethValue

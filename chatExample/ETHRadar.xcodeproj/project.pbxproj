@@ -12,6 +12,7 @@
 		2DAD101A202C4C2100B553F2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD1019202C4C2100B553F2 /* Errors.swift */; };
 		2DAD101C2030E3C700B553F2 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD101B2030E3C700B553F2 /* DoubleExtension.swift */; };
 		2DAD101E2031FDDC00B553F2 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD101D2031FDDC00B553F2 /* DataStorage.swift */; };
+		2DAD10202032419B00B553F2 /* IntegrationStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD101F2032419B00B553F2 /* IntegrationStorageTests.swift */; };
 		2DB3676D2025D64000427E3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3676C2025D64000427E3F /* Localizable.strings */; };
 		CD4D6AC11DBD1DA000643DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6ABF1DBD1DA000643DBF /* LaunchScreen.storyboard */; };
 		CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */; };
@@ -53,6 +54,7 @@
 		2DAD1019202C4C2100B553F2 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		2DAD101B2030E3C700B553F2 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2DAD101D2031FDDC00B553F2 /* DataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
+		2DAD101F2032419B00B553F2 /* IntegrationStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationStorageTests.swift; sourceTree = "<group>"; };
 		2DB3676C2025D64000427E3F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 		CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETHRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6AC01DBD1DA000643DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				CDCEC30C1DC2B0E9002B7549 /* DateHelpersTests.swift */,
 				CD88EF9B1DCA3BE20023FD5F /* ChatTests.swift */,
 				CD88EFA31DCA628A0023FD5F /* ChatViewModelTests.swift */,
+				2DAD101F2032419B00B553F2 /* IntegrationStorageTests.swift */,
 				CD4D6ACD1DBD1DA000643DBF /* Info.plist */,
 			);
 			path = ETHRadarTests;
@@ -332,6 +335,7 @@
 				CD4D6AF11DBD228D00643DBF /* userRepositoryIntegrationTests.swift in Sources */,
 				CD88EF9C1DCA3BE20023FD5F /* ChatTests.swift in Sources */,
 				CD88EFA41DCA628A0023FD5F /* ChatViewModelTests.swift in Sources */,
+				2DAD10202032419B00B553F2 /* IntegrationStorageTests.swift in Sources */,
 				CDCEC30D1DC2B0E9002B7549 /* DateHelpersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

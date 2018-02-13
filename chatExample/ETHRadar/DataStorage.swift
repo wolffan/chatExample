@@ -41,20 +41,25 @@ class TokenStorage: NSObject, NSCoding {
 
 extension TokenStorage {
     func saveData() {
-        NSKeyedArchiver.archiveRootObject(self.internalTokens, toFile: StorageHelper.getFilePath())
+        let result = NSKeyedArchiver.archiveRootObject(self.internalTokens, toFile: StorageHelper.getFilePath())
+        print(result)
     }
     
-    func loadData()  {
+    class func loadData() -> [Token]?  {
         if let loadedData = NSKeyedUnarchiver.unarchiveObject(withFile: StorageHelper.getFilePath()) as? [Token] {
-            self.internalTokens = loadedData
+            return loadedData
         }
+        return nil
     }
 }
 
 class StorageHelper {
     static func getFilePath() -> String {
-        let file = FileManager.default
+        let file = FileManager()
         let url = file.urls(for: .documentDirectory, in: .userDomainMask).first!
-        return url.appendingPathComponent("Data").path
+        print(url)
+        let path =  url.appendingPathComponent("tokens").path
+        print(path)
+        return path
     }
 }

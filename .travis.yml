@@ -2,4 +2,4 @@ language: objective-c
 xcode_project: chatExample/ETHRadar.xcodeproj # path to your xcodeproj folder
 xcode_scheme: ETHRadar
 osx_image: xcode8
-script: xcodebuild -destination "platform=iOS Simulator,name=iPhone 8" -scheme "ETHRadar" -project "chatExample/ETHRadar.xcodeproj" build test  
+script: xcodebuild -destination "platform=iOS Simulator,name=iPhone 7" -scheme "ETHRadar" -project "chatExample/ETHRadar.xcodeproj" build test  

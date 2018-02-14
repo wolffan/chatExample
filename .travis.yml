@@ -1,5 +1,5 @@
 language: objective-c
-xcode_project: chatExample/simpleChat.xcodeproj # path to your xcodeproj folder
-xcode_scheme: simpleChat
+xcode_project: chatExample/ETHRadar.xcodeproj # path to your xcodeproj folder
+xcode_scheme: ETHRadar
 osx_image: xcode8
-script: xcodebuild -destination "platform=iOS Simulator,name=iPhone 6,OS=10.0" -scheme "simpleChat" -project "chatExample/simpleChat.xcodeproj" build test  
+script: xcodebuild -destination "platform=iOS Simulator,name=iPhone 7" -scheme "ETHRadar" -project "chatExample/ETHRadar.xcodeproj" build test  

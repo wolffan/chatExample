@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TokenController" customModule="ETHRadar" customModuleProvider="target">
+            <connections>
+                <outlet property="table" destination="LwK-Ac-0Uz" id="GvC-1e-tk2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="D3w-uL-dyp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="LwK-Ac-0Uz">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="gOH-qe-Ngm"/>
+                        <outlet property="delegate" destination="-1" id="Zlb-se-E2t"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LwK-Ac-0Uz" secondAttribute="bottom" id="4R8-sK-QVj"/>
+                <constraint firstItem="LwK-Ac-0Uz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8wS-Uk-iOJ"/>
+                <constraint firstAttribute="trailing" secondItem="LwK-Ac-0Uz" secondAttribute="trailing" id="gWo-i1-mGk"/>
+                <constraint firstItem="LwK-Ac-0Uz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sOC-wD-pfM"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="79.5"/>
+        </view>
+    </objects>
+</document>

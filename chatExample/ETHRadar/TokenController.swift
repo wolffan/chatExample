@@ -39,12 +39,9 @@ class TokenController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func configureTable() {
         table.rowHeight = UITableViewAutomaticDimension
-        table.estimatedRowHeight = 120
-        var nib : UINib = UINib(nibName: "ChatTableViewCell", bundle: nil)
-        table.register(nib, forCellReuseIdentifier: "ChatTableViewCell")
-        nib = UINib(nibName: "MeChatTableViewCell", bundle: nil)
-        table.register(nib, forCellReuseIdentifier: "MeChatTableViewCell")
-        
+        table.estimatedRowHeight = 45
+        let nib : UINib = UINib(nibName: "TokenCell", bundle: nil)
+        table.register(nib, forCellReuseIdentifier: "TokenCell")
     }
     
     // -- Collection Delegates --
@@ -54,17 +51,12 @@ class TokenController: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let chat = self.repository.getToken(position: indexPath.section)
-//        let viewModel = ChatViewModel.init(chat: chat,username:"")
-//        var cell : conversationCell
-//        if viewModel.me {
-//            cell = tableView.dequeueReusableCell(withIdentifier: "MeChatTableViewCell", for: indexPath) as! MeChatTableViewCell
-//            cell.configWith(viewModel:viewModel)
-//        } else {
-//            cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
-//            cell.configWith(viewModel: viewModel)
-//        }
-        return tableView.dequeueReusableCell(withIdentifier: "MeChatTableViewCell")!
+        let token = self.repository.getToken(position: indexPath.section)
+        let viewModel = TokenCellViewModel.init(token:token)
+        var cell : TokenCell
+        cell = tableView.dequeueReusableCell(withIdentifier: "TokenCell", for: indexPath) as! TokenCell
+        cell.configWith(viewModel: viewModel)
+        return cell
     }
     
     

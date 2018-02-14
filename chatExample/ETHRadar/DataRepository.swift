@@ -16,7 +16,12 @@ protocol ETHRepository {
     
     func fetchAll()
      var loading: Bool { get }
+    
+    func updateCall(block: @escaping updateBlock)
 }
+
+
+typealias updateBlock = () -> ()
 
 // Show us your ability to interact with external apis. You’ll have to deal with multiple calls
 //to fetch the required information. We would like to see how you’ll design that and what
@@ -30,6 +35,7 @@ class DataRepository: ETHRepository {
     
     let storage: TokenStorage
     var loading: Bool
+    private var updateBlock: updateBlock?
     
     init(storage: TokenStorage) {
         self.storage = storage
@@ -70,7 +76,7 @@ class DataRepository: ETHRepository {
     
     func fetchAll() {
         for coin in allCoins() {
-            guard let enumCoin = coins.init(rawValue: coin) else {
+            guard let enumCoin = Coins(rawValue: coin) else {
                 return
             }
             updateCoin(coin: enumCoin)
@@ -78,11 +84,10 @@ class DataRepository: ETHRepository {
     }
     
     //update coin on memory
-    func updateCoin(coin: coins) {
+    func updateCoin(coin: Coins) {
         let url = coin.tokenURL()
         fetch(url: url) { (result) in
             guard let numberOfTokens = result["result"] as? String else {
-                print(result)
                 return
             }
             self.storage.update(token: coin.rawValue, value: Double(numberOfTokens)!.cryptoBalueToDecimals())
@@ -90,28 +95,32 @@ class DataRepository: ETHRepository {
         }
     }
     
-    func getRate(coin: coins) {
+    func getRate(coin: Coins) {
         let url = coin.rateURL()
         fetch(url: url) { (result) in
             guard let rate = result["rate"] as? String, let doubleRate = Double(rate) else {
-                print(result)
                 return
             }
             self.storage.updateRate(token: coin.rawValue, rate: doubleRate)
+            self.updateBlock?()
         }
     }
     
     func allCoins() -> [String] {
-        return [coins.GNT.rawValue, coins.REP.rawValue, coins.OMG.rawValue, coins.ETH.rawValue]
+        return [Coins.GNT.rawValue, Coins.REP.rawValue, Coins.OMG.rawValue, Coins.ETH.rawValue]
     }
     func allTokens() -> [String] {
-        return [coins.GNT.rawValue, coins.REP.rawValue, coins.OMG.rawValue]
+        return [Coins.GNT.rawValue, Coins.REP.rawValue, Coins.OMG.rawValue]
+    }
+    
+    func updateCall(block: @escaping updateBlock) {
+        updateBlock = block
     }
     
     //repository
     
     func getAllTokens() -> [Token] {
-        return self.storage.tokens.filter({$0.key != coins.ETH.rawValue}).map({$0.value})
+        return self.storage.tokens.filter({$0.key != Coins.ETH.rawValue}).map({$0.value})
     }
     
     func allTokens() -> NSInteger {
@@ -119,7 +128,7 @@ class DataRepository: ETHRepository {
     }
     
     func getETHBalance() -> Double {
-        if let eth = self.storage.tokens[coins.ETH.rawValue] {
+        if let eth = self.storage.tokens[Coins.ETH.rawValue] {
             return eth.amount
         } else {
             return 0
@@ -128,49 +137,5 @@ class DataRepository: ETHRepository {
     
     func getToken(position: NSInteger) -> Token {
         return getAllTokens()[position]
-    }
-    
-    // coins info
-    
-    enum coins: String {
-        case GNT
-        case REP
-        case OMG
-        case ETH
-        
-        func fullName() -> String {
-            switch self {
-            case .GNT: return "Golem"
-            case .REP: return "Augur"
-            case .OMG: return "OmniseGo"
-            case .ETH: return "Ethereum"
-            }
-        }
-        
-        func address() -> String {
-            switch self {
-            case .GNT: return "0xa74476443119A942dE498590Fe1f2454d7D4aC0d"
-            case .REP: return "0xe94327d07fc17907b4db788e5adf2ed424addff6"
-            case .OMG: return "0xd26114cd6EE289AccF82350c8d8487fedB8A0C07"
-            case .ETH: return "0x082d3e0f04664b65127876e9A05e2183451c792a"
-            }
-        }
-        
-        func rateString() -> String {
-            return self.rawValue+"_"+"eth"
-        }
-        
-        func rateURL() -> String {
-            return "https://shapeshift.io/rate/\(self.rateString())"
-        }
-        
-        func tokenURL() -> String {
-            switch self {
-            case .ETH:
-                return "https://api.etherscan.io/api?module=account&action=balance&address=\(self.address())&tag=latest&apikey=\(DataRepository.EtherscanAPIKey)"
-            default:
-                return "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=\(self.address())&address=\(DataRepository.address)&tag=latest&apikey=\(DataRepository.EtherscanAPIKey)"
-            }
-        }
     }
 }

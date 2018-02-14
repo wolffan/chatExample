@@ -24,7 +24,7 @@ class ChatViewModelTests: XCTestCase {
     func testChatViewModelShowsTimeAsUserAndTimeWhenNotmainUser() {
         //given   
         let chat = Chat(username: "user1", content: "random content", userImage: "RandomString", time: "12:43")
-        let chatViewModel = ChatViewModel.init(chat: chat, username: "Olivia")
+        let chatViewModel = TokenCellViewModel.init(chat: chat, username: "Olivia")
         
         //then
         XCTAssertEqual(chatViewModel.time, "user1 - 12:43")
@@ -34,7 +34,7 @@ class ChatViewModelTests: XCTestCase {
     func testChatViewModelShowsTimeOnlyWhenUserIsMe() {
         //given
         let chat = Chat(username: "user1", content: "random content", userImage: "RandomString", time: "12:43")
-        let chatViewModel = ChatViewModel.init(chat: chat, username: "user1")
+        let chatViewModel = TokenCellViewModel.init(chat: chat, username: "user1")
         
         //then
         XCTAssertEqual(chatViewModel.time, "12:43")

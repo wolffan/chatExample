@@ -29,14 +29,23 @@ class MainViewModel: MainProtocol {
     
     init(repository: ETHRepository) {
         dataRepo = repository
+        dataRepo.updateCall {
+            DispatchQueue.main.async {
+                self.refreshUI()
+            }
+        }
     }
     
-    func update() {
+    func refreshUI() {
         if dataRepo.allTokens() != 0 {
             status = .loading
         }
         tokenBlock?(tokenInitialValue())
         ethBlock?(ethInitialValue())
+    }
+    
+    func update() {
+        self.refreshUI()
         dataRepo.fetchAll()
     }
     

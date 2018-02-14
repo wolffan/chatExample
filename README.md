@@ -1,5 +1,5 @@
 # ETHRadar
-[![Build Status](https://travis-ci.org/wolffan/chatExample.svg?branch=master)](https://travis-ci.org/wolffan/chatExample)
+[![Build Status](https://travis-ci.org/wolffan/chatExample.svg?branch=argent)](https://travis-ci.org/wolffan/chatExample)
 Example ETH and token Radar
 
 No dependenceis are needed to run the project.

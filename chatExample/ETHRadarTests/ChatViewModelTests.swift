@@ -21,7 +21,7 @@ class TokenViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    func testChatViewModelShowsTimeAsUserAndTimeWhenNotmainUser() {
+    func testChatViewModelShowsCorrectCoinName() {
         //given   
         let token = Token(amount: 2456.0, name: "GNT", rate: 0.345)
         let tokenViewModel = TokenCellViewModel.init(token: token)
@@ -29,6 +29,17 @@ class TokenViewModelTests: XCTestCase {
         //then
         XCTAssertEqual(tokenViewModel.tokenAmount, "2456.0")
         XCTAssertEqual(tokenViewModel.tokenName, "Golem(GNT)")
+        XCTAssertEqual(tokenViewModel.tokenEthValue, "847.32 ETH")
+    }
+    
+    func testChatViewModelShowsUnknownCoinName() {
+        //given
+        let token = Token(amount: 2456.0, name: "REF", rate: 0.345)
+        let tokenViewModel = TokenCellViewModel.init(token: token)
+        
+        //then
+        XCTAssertEqual(tokenViewModel.tokenAmount, "2456.0")
+        XCTAssertEqual(tokenViewModel.tokenName, "(REF)")
         XCTAssertEqual(tokenViewModel.tokenEthValue, "847.32 ETH")
     }
     

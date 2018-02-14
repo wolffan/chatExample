@@ -49,6 +49,16 @@
                ReferencedContainer = "container:ETHRadar.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2D5C0F9620342B5C002D5140"
+               BuildableName = "ETHRadarTests.xctest"
+               BlueprintName = "ETHRadarTests"
+               ReferencedContainer = "container:ETHRadar.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

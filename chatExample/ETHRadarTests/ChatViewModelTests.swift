@@ -27,8 +27,8 @@ class TokenViewModelTests: XCTestCase {
         let tokenViewModel = TokenCellViewModel.init(token: token)
         
         //then
-        XCTAssertEqual(tokenViewModel.tokenAmount, "2456.0 ETH")
-        XCTAssertEqual(tokenViewModel.tokenName, "(Golem(GNT))")
+        XCTAssertEqual(tokenViewModel.tokenAmount, "2456.0")
+        XCTAssertEqual(tokenViewModel.tokenName, "Golem(GNT)")
         XCTAssertEqual(tokenViewModel.tokenEthValue, "847.32 ETH")
     }
     

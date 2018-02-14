@@ -22,7 +22,7 @@ class TokenStorage: NSObject, NSCoding {
         aCoder.encode(self.internalTokens, forKey: TokenStorage.encoderKey)
     }
     
-    private var internalTokens = [String:Token]()
+    fileprivate var internalTokens = [String:Token]()
     
     init(tokens:[String:Token]?) {
         if let safeTokens = tokens {

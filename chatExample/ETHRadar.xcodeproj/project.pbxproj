@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D5C0F9A20342B5C002D5140 /* ETHRadarTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C0F9920342B5C002D5140 /* ETHRadarTest.swift */; };
 		2D83D9DB202AE81C0075EAAE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D83D9DA202AE81B0075EAAE /* ViewController.xib */; };
 		2DAD1018202B70D600B553F2 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD1017202B70D600B553F2 /* Token.swift */; };
 		2DAD101A202C4C2100B553F2 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD1019202C4C2100B553F2 /* Errors.swift */; };
@@ -16,6 +15,10 @@
 		2DAD1022203376CE00B553F2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD1021203376CE00B553F2 /* MainViewModel.swift */; };
 		2DAD102420341C3F00B553F2 /* Coins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD102320341C3F00B553F2 /* Coins.swift */; };
 		2DB3676D2025D64000427E3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DB3676C2025D64000427E3F /* Localizable.strings */; };
+		2DBC434420344314000F4558 /* ETHRadarTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBC434320344314000F4558 /* ETHRadarTesting.swift */; };
+		2DBC434B20344319000F4558 /* DateHelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCEC30C1DC2B0E9002B7549 /* DateHelpersTests.swift */; };
+		2DBC434C2034431C000F4558 /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EFA31DCA628A0023FD5F /* ChatViewModelTests.swift */; };
+		2DBC434D2034431F000F4558 /* IntegrationStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD101F2032419B00B553F2 /* IntegrationStorageTests.swift */; };
 		CD4D6AC11DBD1DA000643DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD4D6ABF1DBD1DA000643DBF /* LaunchScreen.storyboard */; };
 		CD4D6AEA1DBD1E0500643DBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE41DBD1E0500643DBF /* AppDelegate.swift */; };
 		CD4D6AEB1DBD1E0500643DBF /* keyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE51DBD1E0500643DBF /* keyboardExtension.swift */; };
@@ -34,7 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2D5C0F9C20342B5C002D5140 /* PBXContainerItemProxy */ = {
+		2DBC434620344314000F4558 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD4D6AAB1DBD1DA000643DBF /* Project object */;
 			proxyType = 1;
@@ -44,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2D5C0F9720342B5C002D5140 /* ETHRadarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHRadarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5C0F9920342B5C002D5140 /* ETHRadarTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETHRadarTest.swift; sourceTree = "<group>"; };
 		2D5C0F9B20342B5C002D5140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D83D9DA202AE81B0075EAAE /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
@@ -56,6 +58,9 @@
 		2DAD1021203376CE00B553F2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2DAD102320341C3F00B553F2 /* Coins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coins.swift; sourceTree = "<group>"; };
 		2DB3676C2025D64000427E3F /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
+		2DBC434120344314000F4558 /* ETHRadarTesting.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ETHRadarTesting.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DBC434320344314000F4558 /* ETHRadarTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETHRadarTesting.swift; sourceTree = "<group>"; };
+		2DBC434520344314000F4558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ETHRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD4D6AC01DBD1DA000643DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD4D6AC21DBD1DA000643DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,7 +84,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2D5C0F9420342B5C002D5140 /* Frameworks */ = {
+		2DBC433E20344314000F4558 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -105,12 +110,22 @@
 			path = ETHRadarTest;
 			sourceTree = "<group>";
 		};
+		2DBC434220344314000F4558 /* ETHRadarTesting */ = {
+			isa = PBXGroup;
+			children = (
+				2DBC434320344314000F4558 /* ETHRadarTesting.swift */,
+				2DBC434520344314000F4558 /* Info.plist */,
+			);
+			path = ETHRadarTesting;
+			sourceTree = "<group>";
+		};
 		CD4D6AAA1DBD1DA000643DBF = {
 			isa = PBXGroup;
 			children = (
 				CD4D6AB51DBD1DA000643DBF /* ETHRadar */,
 				CD4D6ACA1DBD1DA000643DBF /* ETHRadarTests */,
 				2D5C0F9820342B5C002D5140 /* ETHRadarTest */,
+				2DBC434220344314000F4558 /* ETHRadarTesting */,
 				CD4D6AB41DBD1DA000643DBF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -119,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				CD4D6AB31DBD1DA000643DBF /* ETHRadar.app */,
-				2D5C0F9720342B5C002D5140 /* ETHRadarTests.xctest */,
+				2DBC434120344314000F4558 /* ETHRadarTesting.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,22 +216,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2D5C0F9620342B5C002D5140 /* ETHRadarTests */ = {
+		2DBC434020344314000F4558 /* ETHRadarTesting */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D5C0FA020342B5C002D5140 /* Build configuration list for PBXNativeTarget "ETHRadarTests" */;
+			buildConfigurationList = 2DBC434820344314000F4558 /* Build configuration list for PBXNativeTarget "ETHRadarTesting" */;
 			buildPhases = (
-				2D5C0F9320342B5C002D5140 /* Sources */,
-				2D5C0F9420342B5C002D5140 /* Frameworks */,
-				2D5C0F9520342B5C002D5140 /* Resources */,
+				2DBC433D20344314000F4558 /* Sources */,
+				2DBC433E20344314000F4558 /* Frameworks */,
+				2DBC433F20344314000F4558 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2D5C0F9D20342B5C002D5140 /* PBXTargetDependency */,
+				2DBC434720344314000F4558 /* PBXTargetDependency */,
 			);
-			name = ETHRadarTests;
-			productName = ETHRadarTest;
-			productReference = 2D5C0F9720342B5C002D5140 /* ETHRadarTests.xctest */;
+			name = ETHRadarTesting;
+			productName = ETHRadarTesting;
+			productReference = 2DBC434120344314000F4558 /* ETHRadarTesting.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CD4D6AB21DBD1DA000643DBF /* ETHRadar */ = {
@@ -246,7 +261,7 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Raimon Lapuente";
 				TargetAttributes = {
-					2D5C0F9620342B5C002D5140 = {
+					2DBC434020344314000F4558 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CD4D6AB21DBD1DA000643DBF;
@@ -273,13 +288,13 @@
 			projectRoot = "";
 			targets = (
 				CD4D6AB21DBD1DA000643DBF /* ETHRadar */,
-				2D5C0F9620342B5C002D5140 /* ETHRadarTests */,
+				2DBC434020344314000F4558 /* ETHRadarTesting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2D5C0F9520342B5C002D5140 /* Resources */ = {
+		2DBC433F20344314000F4558 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -302,11 +317,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2D5C0F9320342B5C002D5140 /* Sources */ = {
+		2DBC433D20344314000F4558 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D5C0F9A20342B5C002D5140 /* ETHRadarTest.swift in Sources */,
+				2DBC434D2034431F000F4558 /* IntegrationStorageTests.swift in Sources */,
+				2DBC434420344314000F4558 /* ETHRadarTesting.swift in Sources */,
+				2DBC434C2034431C000F4558 /* ChatViewModelTests.swift in Sources */,
+				2DBC434B20344319000F4558 /* DateHelpersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,10 +355,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2D5C0F9D20342B5C002D5140 /* PBXTargetDependency */ = {
+		2DBC434720344314000F4558 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CD4D6AB21DBD1DA000643DBF /* ETHRadar */;
-			targetProxy = 2D5C0F9C20342B5C002D5140 /* PBXContainerItemProxy */;
+			targetProxy = 2DBC434620344314000F4558 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -356,7 +374,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2D5C0F9E20342B5C002D5140 /* Debug */ = {
+		2DBC434920344314000F4558 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -366,18 +384,18 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ETHRadarTest/Info.plist;
+				INFOPLIST_FILE = ETHRadarTesting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mymoney.balance.ETHRadarTest;
+				PRODUCT_BUNDLE_IDENTIFIER = mymoney.balance.ETHRadarTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ETHRadar.app/ETHRadar";
 			};
 			name = Debug;
 		};
-		2D5C0F9F20342B5C002D5140 /* Release */ = {
+		2DBC434A20344314000F4558 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -387,12 +405,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = ETHRadarTest/Info.plist;
+				INFOPLIST_FILE = ETHRadarTesting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = mymoney.balance.ETHRadarTest;
+				PRODUCT_BUNDLE_IDENTIFIER = mymoney.balance.ETHRadarTesting;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ETHRadar.app/ETHRadar";
 			};
@@ -451,6 +469,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -499,6 +518,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -514,7 +534,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -528,18 +548,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.raimonlapuente.simple.chat.simpleChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D5C0FA020342B5C002D5140 /* Build configuration list for PBXNativeTarget "ETHRadarTests" */ = {
+		2DBC434820344314000F4558 /* Build configuration list for PBXNativeTarget "ETHRadarTesting" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D5C0F9E20342B5C002D5140 /* Debug */,
-				2D5C0F9F20342B5C002D5140 /* Release */,
+				2DBC434920344314000F4558 /* Debug */,
+				2DBC434A20344314000F4558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

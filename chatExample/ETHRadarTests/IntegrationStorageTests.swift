@@ -28,7 +28,7 @@ class IntegrationStorageTests: XCTestCase {
     
     func testStorageWhenNotEmpty() {
         //given
-        let token = Token.init(amount: 2.52, name: "aToken", ethValue: 0.25)
+        let token = Token.init(amount: 2.52, name: "aToken", rate: 0.25)
         let oneToken = TokenStorage.init(tokens: [token.name:token])
         oneToken.saveData()
         
@@ -41,7 +41,7 @@ class IntegrationStorageTests: XCTestCase {
     
     func testRetrivalKeepsDataStructure() {
         //given
-        let token = Token.init(amount: 2.52, name: "aToken", ethValue: 0.25)
+        let token = Token.init(amount: 2.52, name: "aToken", rate: 0.25)
         let oneToken = TokenStorage.init(tokens: [token.name:token])
         oneToken.saveData()
         

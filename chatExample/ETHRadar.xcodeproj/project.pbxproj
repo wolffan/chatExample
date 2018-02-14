@@ -22,7 +22,6 @@
 		CD4D6AEC1DBD1E0500643DBF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE61DBD1E0500643DBF /* Router.swift */; };
 		CD4D6AEE1DBD1E0500643DBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4D6AE81DBD1E0500643DBF /* ViewController.swift */; };
 		CD88EF9A1DC9CE750023FD5F /* TokenCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF991DC9CE750023FD5F /* TokenCellViewModel.swift */; };
-		CD88EF9C1DCA3BE20023FD5F /* ChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EF9B1DCA3BE20023FD5F /* ChatTests.swift */; };
 		CD88EFA01DCA47C00023FD5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD88EF9F1DCA47C00023FD5F /* Assets.xcassets */; };
 		CD88EFA41DCA628A0023FD5F /* ChatViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD88EFA31DCA628A0023FD5F /* ChatViewModelTests.swift */; };
 		CD955F291DC15E600032EE3D /* TokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD955F281DC15E600032EE3D /* TokenCell.swift */; };
@@ -66,7 +65,6 @@
 		CD4D6AE61DBD1E0500643DBF /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CD4D6AE81DBD1E0500643DBF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD88EF991DC9CE750023FD5F /* TokenCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenCellViewModel.swift; sourceTree = "<group>"; };
-		CD88EF9B1DCA3BE20023FD5F /* ChatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTests.swift; sourceTree = "<group>"; };
 		CD88EF9F1DCA47C00023FD5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CD88EFA31DCA628A0023FD5F /* ChatViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewModelTests.swift; sourceTree = "<group>"; };
 		CD955F281DC15E600032EE3D /* TokenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenCell.swift; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				CDCEC30C1DC2B0E9002B7549 /* DateHelpersTests.swift */,
-				CD88EF9B1DCA3BE20023FD5F /* ChatTests.swift */,
 				CD88EFA31DCA628A0023FD5F /* ChatViewModelTests.swift */,
 				2DAD101F2032419B00B553F2 /* IntegrationStorageTests.swift */,
 				CD4D6ACD1DBD1DA000643DBF /* Info.plist */,
@@ -325,7 +322,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD88EF9C1DCA3BE20023FD5F /* ChatTests.swift in Sources */,
 				CD88EFA41DCA628A0023FD5F /* ChatViewModelTests.swift in Sources */,
 				2DAD10202032419B00B553F2 /* IntegrationStorageTests.swift in Sources */,
 				CDCEC30D1DC2B0E9002B7549 /* DateHelpersTests.swift in Sources */,

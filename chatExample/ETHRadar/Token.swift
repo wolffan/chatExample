@@ -35,10 +35,10 @@ class Token: NSObject, NSCoding {
         aCoder.encode(rate, forKey: Token.encoderethValueKey)
     }
     
-    init(amount: Double, name: String, ethValue: Double) {
+    init(amount: Double, name: String, rate: Double) {
         self.name = name
-        self.amount = Double(amount)
-        self.rate = ethValue
+        self.amount = amount
+        self.rate = rate
     }
     
     

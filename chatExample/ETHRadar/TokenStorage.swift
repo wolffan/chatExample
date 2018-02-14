@@ -43,10 +43,10 @@ class TokenStorage: NSObject, NSCoding {
     
     func update(token: String, value: Double) {
         if let oldToken = internalTokens[token] {
-            let newToken = Token.init(amount: value, name: oldToken.name, ethValue: oldToken.rate)
+            let newToken = Token.init(amount: value, name: oldToken.name, rate: oldToken.rate)
             self.internalTokens[token] = newToken
         } else {
-            let newToken = Token.init(amount: value, name: token, ethValue: 0)
+            let newToken = Token.init(amount: value, name: token, rate: 0)
             self.internalTokens[token] = newToken
         }
         saveData()
@@ -54,7 +54,7 @@ class TokenStorage: NSObject, NSCoding {
     
     func updateRate(token: String, rate: Double) {
         if let oldToken = internalTokens[token] {
-            let newToken = Token.init(amount: oldToken.amount, name: oldToken.name, ethValue: rate)
+            let newToken = Token.init(amount: oldToken.amount, name: oldToken.name, rate: rate)
             self.internalTokens[token] = newToken
         } else {
             print("there should be a token")

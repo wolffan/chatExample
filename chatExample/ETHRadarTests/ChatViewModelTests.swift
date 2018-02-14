@@ -9,7 +9,7 @@
 import XCTest
 @testable import ETHRadar
 
-class ChatViewModelTests: XCTestCase {
+class TokenViewModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -23,22 +23,13 @@ class ChatViewModelTests: XCTestCase {
     
     func testChatViewModelShowsTimeAsUserAndTimeWhenNotmainUser() {
         //given   
-        let chat = Chat(username: "user1", content: "random content", userImage: "RandomString", time: "12:43")
-        let chatViewModel = TokenCellViewModel.init(chat: chat, username: "Olivia")
+        let token = Token(amount: 2456.0, name: "GNT", rate: 0.345)
+        let tokenViewModel = TokenCellViewModel.init(token: token)
         
         //then
-        XCTAssertEqual(chatViewModel.time, "user1 - 12:43")
-        XCTAssertFalse(chatViewModel.me)
-    }
-    
-    func testChatViewModelShowsTimeOnlyWhenUserIsMe() {
-        //given
-        let chat = Chat(username: "user1", content: "random content", userImage: "RandomString", time: "12:43")
-        let chatViewModel = TokenCellViewModel.init(chat: chat, username: "user1")
-        
-        //then
-        XCTAssertEqual(chatViewModel.time, "12:43")
-        XCTAssertTrue(chatViewModel.me)
+        XCTAssertEqual(tokenViewModel.tokenAmount, "2456.0 ETH")
+        XCTAssertEqual(tokenViewModel.tokenName, "(Golem(GNT))")
+        XCTAssertEqual(tokenViewModel.tokenEthValue, "847.32 ETH")
     }
     
 }

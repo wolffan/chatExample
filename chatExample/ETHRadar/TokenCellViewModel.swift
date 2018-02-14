@@ -18,8 +18,11 @@ class TokenCellViewModel {
     
     init(token: Token) {
         self.token = token
-        let coin: Coins? = Coins(rawValue:self.token.name)
-        self.tokenName = "\(String(describing: coin?.fullName()))(\(self.token.name))"
+        if let coin: Coins = Coins(rawValue:self.token.name) {
+            self.tokenName = "\(coin.fullName())(\(self.token.name))"
+        } else {
+            self.tokenName = "(\(self.token.name))"
+        }
         self.tokenAmount = "\(self.token.amount)"
         self.tokenEthValue = "\(self.token.amount * self.token.rate) ETH"
     }
